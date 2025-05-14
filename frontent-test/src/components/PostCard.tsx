@@ -1,0 +1,54 @@
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight, MessageSquare } from "lucide-react"
+import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
+import { formatDate, stripHtml } from "@/utils/html"
+
+interface PostCardProps {
+  post: WordPressPost
+  media: WordPressMedia
+  commentCount?: number
+}
+
+export default function PostCard({ post, media, commentCount = 0 }: PostCardProps) {
+  const imageUrl = media?.source_url || "/placeholder.svg?height=400&width=600"
+  const excerpt = stripHtml(post.excerpt.rendered).substring(0, 120) + "..."
+
+  return (
+    <div className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px]">
+      <Link href={`/post/${post.slug}`} className="block">
+        <div className="relative aspect-[16/9] overflow-hidden">
+          <Image
+            src={imageUrl || "/placeholder.svg"}
+            alt={media?.alt_text || post.title.rendered}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        <div className="p-5">
+          <div className="flex justify-between items-center mb-2">
+            <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
+            {commentCount > 0 && (
+              <div className="flex items-center text-sm text-gray-500">
+                <MessageSquare size={16} className="mr-1" />
+                <span>{commentCount}</span>
+              </div>
+            )}
+          </div>
+          <h2 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors line-clamp-2">
+            {post.title.rendered}
+          </h2>
+          <p className="text-gray-600 text-sm font-normal leading-relaxed mb-4 line-clamp-3 italic">{excerpt}</p>
+          <div className="inline-flex items-center text-emerald-600 font-medium group-hover:text-emerald-700 transition-colors">
+            Read more
+            <ArrowRight
+              size={16}
+              className="ml-1 transform transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </div>
+        </div>
+      </Link>
+    </div>
+  )
+}
