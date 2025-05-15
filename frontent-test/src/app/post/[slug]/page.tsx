@@ -56,7 +56,6 @@ export default async function PostPage({ params }: PageProps) {
       post={post}
       media={media}
       author={author}
-      relatedPosts={relatedPosts}
     />
   )
 }

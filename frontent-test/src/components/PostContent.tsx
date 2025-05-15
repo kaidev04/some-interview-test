@@ -17,13 +17,9 @@ interface PostContentProps {
   post: WordPressPost
   media?: WordPressMedia
   author?: Author
-  relatedPosts?: Array<{
-    post: WordPressPost
-    media?: WordPressMedia
-  }>
 }
 
-export default function PostContent({ post, media, author, relatedPosts = [] }: PostContentProps) {
+export default function PostContent({ post, media, author }: PostContentProps) {
   const heroRef = useRef<HTMLDivElement>(null)
   const defaultMedia: WordPressMedia = {
     id: 0,
@@ -169,32 +165,6 @@ export default function PostContent({ post, media, author, relatedPosts = [] }: 
           {/* Sidebar */}
           <div className="lg:col-span-4">
             <div className="sticky top-28">
-              {/* Related posts */}
-              {relatedPosts.length > 0 && (
-                <div className="bg-gray-50 rounded-xl p-6 mb-8">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Related Posts</h3>
-                  <div className="space-y-4">
-                    {relatedPosts.map(({ post: relatedPost, media: relatedMedia }) => (
-                      <Link key={relatedPost.id} href={`/post/${relatedPost.slug}`} className="flex gap-4 group">
-                        <FeaturedImage
-                          media={relatedMedia || defaultMedia}
-                          size="thumbnail"
-                          className="w-20 h-20 rounded-lg flex-shrink-0"
-                        />
-                        <div>
-                          <h4 className="font-medium text-gray-800 group-hover:text-emerald-600 transition-colors line-clamp-2">
-                            {relatedPost.title.rendered}
-                          </h4>
-                          <time dateTime={relatedPost.date} className="text-sm text-gray-500">
-                            {formatDate(relatedPost.date)}
-                          </time>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-
               {/* Newsletter signup */}
               <div className="bg-emerald-50 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Subscribe to our newsletter</h3>
