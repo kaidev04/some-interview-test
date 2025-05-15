@@ -18,7 +18,7 @@ export default function PostCard({ post, media, commentCount = 0, categories, in
   const title = decodeHtml(post.title.rendered)
 
   return (
-    <div className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px]">
+    <div className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px]">
       <Link href={`/post/${post.slug}`} className="block">
         <div className="relative aspect-[16/9] overflow-hidden">
           <Image
@@ -48,7 +48,7 @@ export default function PostCard({ post, media, commentCount = 0, categories, in
           </h2>
           <p className="text-gray-600 text-sm font-normal leading-relaxed mb-4 line-clamp-3 italic">{excerpt}</p>
           <div className="inline-flex items-center text-emerald-600 font-medium group-hover:text-emerald-700 transition-colors">
-            Read more
+            Läs mer
             <ArrowRight
               size={16}
               className="ml-1 transform transition-transform duration-300 group-hover:translate-x-1"

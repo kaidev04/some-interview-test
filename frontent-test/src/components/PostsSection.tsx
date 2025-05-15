@@ -80,7 +80,7 @@ export default function PostsSection({ posts: allPosts, mediaMap, totalPosts }: 
   return (
     <div className="py-12" id="posts-section">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Latest News</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Aktuellt</h2>
         
         <PostControls
           sortOrder={sortOrder}
@@ -104,7 +104,7 @@ export default function PostsSection({ posts: allPosts, mediaMap, totalPosts }: 
 
         {filteredAndSortedPosts.length === 0 && !isLoading && (
           <div className="text-center py-12">
-            <p className="text-gray-600">No posts found matching your search criteria.</p>
+            <p className="text-gray-600">Inga inlägg hittades som matchar dina sökningar.</p>
           </div>
         )}
 

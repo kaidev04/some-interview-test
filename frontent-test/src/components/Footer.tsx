@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, ArrowRight } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Mail, ArrowRight, Clock, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
   const [email, setEmail] = useState("")
@@ -17,14 +17,14 @@ export default function Footer() {
     setEmail("")
   }
 
-  // Sample categories - replace with actual categories from your data
+  // Sample categories
   const categories = [
-    { name: "News", slug: "news" },
-    { name: "Events", slug: "events" },
-    { name: "Business", slug: "business" },
-    { name: "Culture", slug: "culture" },
-    { name: "Lifestyle", slug: "lifestyle" },
-    { name: "Food", slug: "food" },
+    { name: "Nyheter", slug: "nyheter" },
+    { name: "Evenemang", slug: "evenemang" },
+    { name: "Företag", slug: "foretag" },
+    { name: "Kultur", slug: "kultur" },
+    { name: "Livsstil", slug: "livsstil" },
+    { name: "Mat", slug: "mat" },
   ]
 
   return (
@@ -38,11 +38,12 @@ export default function Footer() {
               <div className="h-10 w-10 rounded-full bg-emerald-600 flex items-center justify-center">
                 <span className="text-white font-bold text-xl">B</span>
               </div>
-              <span className="font-bold text-2xl text-white">Bergvik News</span>
+              <span className="font-bold text-2xl text-white">Bergvik</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Your trusted source for local news, events, and stories that matter to the Bergvik community. Delivering
-              timely and relevant information since 2020.
+              Bergvik är ett modernt köpcentrum med ett brett utbud av butiker, restauranger och serviceinrättningar. 
+              Här hittar du allt under ett tak - mode, mat, elektronik och mycket mer. Välkommen till din 
+              shoppingdestination i Karlstad!
             </p>
             <div className="flex space-x-4 pt-2">
               <a
@@ -87,7 +88,7 @@ export default function Footer() {
           {/* Quick links */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:bg-emerald-500 after:mt-1">
-              Quick Links
+              Snabblänkar
             </h3>
             <ul className="space-y-2">
               <li>
@@ -99,55 +100,55 @@ export default function Footer() {
                     size={14}
                     className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
                   />
-                  Home
+                  Hem
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/news"
+                  href="/nyheter"
                   className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
                 >
                   <ArrowRight
                     size={14}
                     className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
                   />
-                  News
+                  Nyheter
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/om-oss"
                   className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
                 >
                   <ArrowRight
                     size={14}
                     className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
                   />
-                  About
+                  Om Oss
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/kontakt"
                   className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
                 >
                   <ArrowRight
                     size={14}
                     className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
                   />
-                  Contact
+                  Kontakt
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/search"
+                  href="/sök"
                   className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
                 >
                   <ArrowRight
                     size={14}
                     className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
                   />
-                  Search
+                  Sök
                 </Link>
               </li>
             </ul>
@@ -156,7 +157,7 @@ export default function Footer() {
           {/* Categories */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:bg-emerald-500 after:mt-1">
-              Categories
+              Kategorier
             </h3>
             <ul className="space-y-2">
               {categories.map((category) => (
@@ -176,35 +177,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact Information */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:bg-emerald-500 after:mt-1">
-              Newsletter
+              Kontakta Oss
             </h3>
-            <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and news.</p>
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <div className="relative">
-                <Mail size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 pl-10 pr-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center group"
-              >
-                Subscribe
-                <ArrowRight
-                  size={16}
-                  className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </button>
-            </form>
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <MapPin size={18} className="mt-1 mr-3 flex-shrink-0 text-emerald-400" />
+                <span>Bergvik Center, Storgatan 45, 651 84 Karlstad</span>
+              </li>
+              <li className="flex items-center">
+                <Mail size={18} className="mr-3 flex-shrink-0 text-emerald-400" />
+                <a href="mailto:info@bergvik-news.se" className="hover:text-emerald-400 transition-colors">
+                  info@bergvik-news.se
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Phone size={18} className="mr-3 flex-shrink-0 text-emerald-400" />
+                <a href="tel:+4654123456" className="hover:text-emerald-400 transition-colors">
+                  +46 54 123 45 67
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Clock size={18} className="mr-3 flex-shrink-0 text-emerald-400" />
+                <span>Måndag-Fredag: 9:00-17:00</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -214,20 +213,20 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Bergvik News. All rights reserved.
+              &copy; Bergvik {currentYear}
             </div>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
+              <Link href="/integritetspolicy" className="text-gray-400 hover:text-white transition-colors">
+                Integritetspolicy
               </Link>
-              <Link href="/terms-of-use" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Use
+              <Link href="/anvandningsvillkor" className="text-gray-400 hover:text-white transition-colors">
+                Användningsvillkor
               </Link>
               <Link href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
               </Link>
-              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors">
-                Accessibility
+              <Link href="/tillganglighet" className="text-gray-400 hover:text-white transition-colors">
+                Tillgänglighet
               </Link>
             </div>
           </div>

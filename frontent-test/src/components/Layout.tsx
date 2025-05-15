@@ -74,7 +74,7 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="text-white font-bold">B</span>
               </div>
               <span className="font-bold text-xl text-emerald-600 group-hover:text-emerald-700 transition-colors">
-                Bergvik News
+                Bergvik
               </span>
             </Link>
 

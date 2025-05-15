@@ -137,13 +137,13 @@ export default function SearchOverlay({ isOpen, onClose, posts, media }: SearchO
             </div>
           ) : searchTerm ? (
             <div className="p-8 text-center">
-              <p className="text-gray-500">No results found for "{searchTerm}"</p>
-              <p className="text-sm text-gray-400 mt-2">Try different keywords or browse our categories</p>
+              <p className="text-gray-500">Inga resultat hittades för "{searchTerm}"</p>
+              <p className="text-sm text-gray-400 mt-2">Prova andra sökord eller bläddra i våra kategorier</p>
             </div>
           ) : (
             <div className="p-8 text-center">
-              <p className="text-gray-500">Start typing to search</p>
-              <p className="text-sm text-gray-400 mt-2">Search by title, content, or keywords</p>
+              <p className="text-gray-500">Börja skriva för att söka</p>
+              <p className="text-sm text-gray-400 mt-2">Sök efter titel, innehåll eller nyckelord</p>
             </div>
           )}
         </div>

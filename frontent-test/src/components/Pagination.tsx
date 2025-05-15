@@ -64,8 +64,8 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="p-2 rounded-md border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-        aria-label="Previous page"
+        className="p-2 rounded-xl border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        aria-label="Föregående sida"
       >
         <ChevronLeft size={16} />
       </button>
@@ -75,7 +75,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
           <button
             key={index}
             onClick={() => onPageChange(page)}
-            className={`w-10 h-10 rounded-md flex items-center justify-center transition-colors ${
+            className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
               currentPage === page
                 ? "bg-emerald-600 text-white"
                 : "border border-gray-300 text-gray-700 hover:bg-gray-50"
@@ -93,8 +93,8 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="p-2 rounded-md border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-        aria-label="Next page"
+        className="p-2 rounded-xl border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        aria-label="Nästa sida"
       >
         <ChevronRight size={16} />
       </button>

@@ -69,7 +69,7 @@ export default function HomePageTemplate({ posts, media, categories }: HomePageT
             <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
               <Mail size={32} className="text-emerald-600" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Stay Updated with Bergvik News</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Håll dig uppdaterad med Bergvik</h2>
             <p className="text-gray-600 mb-8 text-lg">
               Subscribe to our newsletter and never miss the latest news, updates, and special offers.
             </p>
