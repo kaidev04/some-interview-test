@@ -55,9 +55,9 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Hem", href: "/" },
+    { name: "Om oss", href: "/om-oss" },
+    { name: "Kontakt", href: "/kontakt" },
   ]
 
   return (
@@ -147,7 +147,7 @@ export default function Layout({ children }: LayoutProps) {
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
-                  placeholder="Search articles..."
+                  placeholder="Sök inlägg..."
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

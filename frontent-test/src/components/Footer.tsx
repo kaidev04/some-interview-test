@@ -124,7 +124,7 @@ export default function Footer() {
                     size={14}
                     className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
                   />
-                  Om Oss
+                  Om oss
                 </Link>
               </li>
               <li>
@@ -180,7 +180,7 @@ export default function Footer() {
           {/* Contact Information */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:bg-emerald-500 after:mt-1">
-              Kontakta Oss
+              Kontakta oss
             </h3>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-start">
