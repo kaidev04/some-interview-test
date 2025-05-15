@@ -4,15 +4,11 @@ import { ArrowRight } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
 import PostsSection from "@/components/PostsSection"
 import { getPosts, getMedia } from '@/lib/wordpress'
-
-function formatDate(dateString: string): string {
-  const date = new Date(dateString)
-  const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" }
-  return date.toLocaleDateString("en-US", options)
-}
+import { formatDate, decodeHtml } from '@/utils/html'
 
 export default async function Home() {
-  const { posts, totalPages } = await getPosts(1, 9) // Get first page with 9 posts
+  // Get all posts at once by not specifying perPage
+  const { posts, totalPosts } = await getPosts()
   
   if (!posts || posts.length === 0) {
     return (
@@ -24,8 +20,8 @@ export default async function Home() {
 
   // Get the first post for the featured section
   const featuredPost = posts[0]
-  // Rest of the posts for the grid
-  const gridPosts = posts.slice(1)
+  // All posts for the grid
+  const gridPosts = posts
 
   // Fetch media for each post
   const mediaPromises = posts.map(post => 
@@ -35,6 +31,8 @@ export default async function Home() {
   const mediaMap = new Map(
     mediaResults.map((media, index) => [posts[index].id, media])
   )
+
+  const featuredTitle = decodeHtml(featuredPost.title.rendered)
 
   return (
     <div>
@@ -48,7 +46,7 @@ export default async function Home() {
                   Featured Story
                 </span>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                  {featuredPost.title.rendered}
+                  {featuredTitle}
                 </h1>
                 <div
                   className="text-gray-600 mb-6 text-base italic font-light"
@@ -71,7 +69,7 @@ export default async function Home() {
               <div className="relative h-[300px] md:h-[350px] rounded-lg overflow-hidden shadow-lg animate-slideUp">
                 <Image
                   src={mediaMap.get(featuredPost.id)?.source_url || '/placeholder.jpg'}
-                  alt={featuredPost.title.rendered}
+                  alt={featuredTitle}
                   fill
                   className="object-cover transition-all duration-300"
                   priority
@@ -87,7 +85,7 @@ export default async function Home() {
       <PostsSection
         posts={gridPosts}
         mediaMap={mediaMap}
-        totalPages={totalPages}
+        totalPosts={totalPosts}
       />
 
       {/* Newsletter Section */}

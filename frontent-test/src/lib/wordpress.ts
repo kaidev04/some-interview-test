@@ -27,8 +27,15 @@ async function getTotalPosts(): Promise<number> {
   }
 }
 
-export async function getPosts(page: number = 1, perPage: number = 9): Promise<PaginatedPosts> {
+export async function getPosts(page?: number, perPage?: number): Promise<PaginatedPosts> {
   try {
+    // If no perPage is specified, get all posts
+    if (!perPage) {
+      const total = await getTotalPosts();
+      perPage = total;
+      page = 1;
+    }
+
     const response = await fetch(
       `${API_URL}/posts?page=${page}&per_page=${perPage}&_embed`,
       { next: { revalidate: 3600 } }

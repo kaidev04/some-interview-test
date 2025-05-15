@@ -1,69 +1,97 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
 import PostCard from "./PostCard"
 import Pagination from "./Pagination"
-import { getPosts, getMedia } from '@/lib/wordpress'
+import PostControls from "./PostControls"
 
 interface PostsSectionProps {
   posts: WordPressPost[]
   mediaMap: Map<number, WordPressMedia | null>
-  totalPages: number
+  totalPosts: number
 }
 
-export default function PostsSection({ posts: initialPosts, mediaMap: initialMediaMap, totalPages }: PostsSectionProps) {
+const POSTS_PER_PAGE = 9
+
+export default function PostsSection({ posts: allPosts, mediaMap, totalPosts }: PostsSectionProps) {
   const [currentPage, setCurrentPage] = useState(1)
-  const [posts, setPosts] = useState(initialPosts)
-  const [mediaMap, setMediaMap] = useState(initialMediaMap)
+  const [sortOrder, setSortOrder] = useState<'newest' | 'oldest'>('newest')
+  const [searchQuery, setSearchQuery] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
-  const handlePageChange = async (page: number) => {
+  // Filter and sort posts
+  const filteredAndSortedPosts = useMemo(() => {
+    let result = [...allPosts]
+    
+    // Filter by search query
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase()
+      result = result.filter(post => {
+        const title = post.title.rendered.toLowerCase()
+        const excerpt = post.excerpt.rendered.toLowerCase()
+        return title.includes(query) || excerpt.includes(query)
+      })
+    }
+    
+    // Sort posts
+    result.sort((a, b) => {
+      const dateA = new Date(a.date).getTime()
+      const dateB = new Date(b.date).getTime()
+      return sortOrder === 'newest' ? dateB - dateA : dateA - dateB
+    })
+    
+    return result
+  }, [allPosts, searchQuery, sortOrder])
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredAndSortedPosts.length / POSTS_PER_PAGE)
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE
+  const paginatedPosts = filteredAndSortedPosts.slice(startIndex, startIndex + POSTS_PER_PAGE)
+
+  const handlePageChange = (page: number) => {
     setIsLoading(true)
     setCurrentPage(page)
-
-    try {
-      const { posts: newPosts } = await getPosts(page, 9)
-      
-      // Fetch media for new posts
-      const mediaPromises = newPosts.map(post => 
-        post.featured_media ? getMedia(post.featured_media) : Promise.resolve(null)
-      )
-      const mediaResults = await Promise.all(mediaPromises)
-      const newMediaMap = new Map(
-        mediaResults.map((media, index) => [newPosts[index].id, media])
-      )
-
-      setPosts(newPosts)
-      
-      // Create a new map by combining both maps
-      const combinedMap = new Map()
-      Array.from(mediaMap.entries()).forEach(([key, value]) => combinedMap.set(key, value))
-      Array.from(newMediaMap.entries()).forEach(([key, value]) => combinedMap.set(key, value))
-      setMediaMap(combinedMap)
-    } catch (error) {
-      console.error('Error fetching posts:', error)
-    } finally {
-      setIsLoading(false)
-    }
 
     // Scroll to posts section
     const postsSection = document.getElementById('posts-section')
     if (postsSection) {
       postsSection.scrollIntoView({ behavior: 'smooth' })
     }
+
+    // Simulate loading for smoother transition
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 300)
+  }
+
+  const handleSortChange = (order: 'newest' | 'oldest') => {
+    setSortOrder(order)
+    setCurrentPage(1) // Reset to first page when sorting changes
+  }
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query)
+    setCurrentPage(1) // Reset to first page when search changes
   }
 
   return (
     <div className="py-12" id="posts-section">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Latest News</h2>
+        
+        <PostControls
+          sortOrder={sortOrder}
+          onSortChange={handleSortChange}
+          onSearch={handleSearch}
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
+          {paginatedPosts.map((post, index) => (
             <div
-              key={post.id}
+              key={`${post.id}-${index}`}
               className="animate-slideUp"
               style={{
                 animationDelay: `${index * 100}ms`,
@@ -73,6 +101,12 @@ export default function PostsSection({ posts: initialPosts, mediaMap: initialMed
             </div>
           ))}
         </div>
+
+        {filteredAndSortedPosts.length === 0 && !isLoading && (
+          <div className="text-center py-12">
+            <p className="text-gray-600">No posts found matching your search criteria.</p>
+          </div>
+        )}
 
         {isLoading && (
           <div className="mt-8">
