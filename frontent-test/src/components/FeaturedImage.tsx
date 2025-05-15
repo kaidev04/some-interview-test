@@ -38,36 +38,41 @@ export default function FeaturedImage({
     return null
   }
 
-  // Get the image URL with fallbacks
-  const imageSize = media?.media_details?.sizes[size] || media?.media_details?.sizes?.full
-  const imageUrl = imageSize?.source_url || media?.source_url
+  // Always use the full-size image for best quality
+  const fullSizeImage = media?.media_details?.sizes?.full || media
+  const imageUrl = fullSizeImage?.source_url || media?.source_url
   const altText = media?.alt_text || media?.title?.rendered || "Featured image"
 
-  // Get dimensions
-  const width = imageSize?.width || media?.media_details?.width || 800
-  const height = imageSize?.height || media?.media_details?.height || 600
+  // Get original dimensions
+  const width = media?.media_details?.width || 800
+  const height = media?.media_details?.height || 600
 
-  console.log('Image details:', {
+  console.log('Image quality details:', {
     url: imageUrl,
-    width,
-    height,
-    fill,
-    priority,
-    size,
-    className
+    originalWidth: width,
+    originalHeight: height,
+    aspectRatio: (width / height).toFixed(2),
+    sourceSize: 'full',
+    fullSizeDetails: media?.media_details?.sizes?.full,
+    allAvailableSizes: Object.entries(media?.media_details?.sizes || {}).map(([key, value]: [string, any]) => ({
+      size: key,
+      dimensions: `${value.width}x${value.height}`,
+      url: value.source_url
+    }))
   })
 
   const hoverClass = withHoverEffect
     ? "transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"
     : ""
 
-  const loadingClass = isLoading ? "blur-sm" : "blur-0"
+  // Remove blur effect from loading state
+  const loadingClass = ""
 
   // If no valid URL, show placeholder
   if (!imageUrl) {
     return (
       <div className={`relative overflow-hidden ${className} ${withHoverEffect ? "group" : ""}`}>
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+        <div className="absolute inset-0 bg-gray-200" />
       </div>
     )
   }
@@ -82,13 +87,15 @@ export default function FeaturedImage({
           src={imageUrl}
           alt={altText}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className={`object-cover w-full h-full ${hoverClass} ${loadingClass}`}
+          sizes="100vw"
+          className={`object-cover w-full h-full ${hoverClass}`}
           style={{ position: 'absolute', inset: 0 }}
           priority={priority}
+          loading="eager"
+          quality={100}
           onLoadingComplete={() => {
-            console.log('Image loaded successfully:', imageUrl)
             setIsLoading(false)
+            console.log('Image loaded successfully:', imageUrl)
           }}
           onError={(e) => {
             console.error('Image failed to load:', imageUrl)
@@ -101,11 +108,13 @@ export default function FeaturedImage({
           alt={altText}
           width={width}
           height={height}
-          className={`object-cover w-full h-auto ${hoverClass} ${loadingClass}`}
+          className={`object-cover w-full h-auto ${hoverClass}`}
           priority={priority}
+          loading="eager"
+          quality={100}
           onLoadingComplete={() => {
-            console.log('Image loaded successfully:', imageUrl)
             setIsLoading(false)
+            console.log('Image loaded successfully:', imageUrl)
           }}
           onError={(e) => {
             console.error('Image failed to load:', imageUrl)
