@@ -2,7 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['bergvik.se'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'bergvik.se',
+        pathname: '/**',
+      }
+    ],
   },
 };
 

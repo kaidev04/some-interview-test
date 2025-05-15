@@ -2,19 +2,16 @@ export const sanitizeHtml = (html: string): string => {
   return html
 }
 
-export const stripHtml = (html: string): string => {
-  if (typeof window === "undefined") {
-    return html.replace(/<[^>]*>/g, "")
-  }
-  const doc = new DOMParser().parseFromString(html, "text/html")
-  return doc.body.textContent || ""
+export function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>/g, '');
 }
 
-export const formatDate = (dateString: string): string => {
-  const date = new Date(dateString)
-  return new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(date)
+export function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  const options: Intl.DateTimeFormatOptions = { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  };
+  return date.toLocaleDateString('en-US', options);
 }

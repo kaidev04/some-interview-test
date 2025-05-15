@@ -1,34 +1,39 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, MessageSquare } from "lucide-react"
+import { ArrowRight, MessageSquare, Calendar } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
 import { formatDate, stripHtml } from "@/utils/html"
 
 interface PostCardProps {
   post: WordPressPost
-  media: WordPressMedia
+  media?: WordPressMedia | null
   commentCount?: number
 }
 
 export default function PostCard({ post, media, commentCount = 0 }: PostCardProps) {
-  const imageUrl = media?.source_url || "/placeholder.svg?height=400&width=600"
+  const imageUrl = media?.source_url || "/placeholder.jpg"
   const excerpt = stripHtml(post.excerpt.rendered).substring(0, 120) + "..."
 
   return (
     <div className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px]">
       <Link href={`/post/${post.slug}`} className="block">
-        <div className="relative aspect-[16/9] overflow-hidden">
-          <Image
-            src={imageUrl || "/placeholder.svg"}
-            alt={media?.alt_text || post.title.rendered}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+        <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+          <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-105">
+            <Image
+              src={imageUrl}
+              alt={media?.alt_text || post.title.rendered}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
         </div>
         <div className="p-5">
           <div className="flex justify-between items-center mb-2">
-            <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
+            <div className="flex items-center text-sm text-gray-500">
+              <Calendar size={16} className="mr-2" />
+              <span>{formatDate(post.date)}</span>
+            </div>
             {commentCount > 0 && (
               <div className="flex items-center text-sm text-gray-500">
                 <MessageSquare size={16} className="mr-1" />
