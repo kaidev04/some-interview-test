@@ -72,12 +72,20 @@ export default function PostContent({ post, media, author, relatedPosts = [] }: 
     <article className="bg-white">
       {/* Hero section with parallax */}
       <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-        <div ref={heroRef} className="absolute inset-0 -z-10">
-          <FeaturedImage media={media || defaultMedia} size="full" priority={true} fill={true} className="w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div ref={heroRef} className="absolute inset-0 w-full h-full">
+          <div className="relative w-full h-full">
+            <FeaturedImage 
+              media={media || defaultMedia} 
+              size="full" 
+              priority={true} 
+              fill={true} 
+              className="w-full h-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+          </div>
         </div>
 
-        <div className="container mx-auto px-4 h-full flex flex-col justify-end pb-12">
+        <div className="container mx-auto px-4 h-full flex flex-col justify-end pb-12 relative z-10">
           <div className="max-w-3xl text-white">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{post.title.rendered}</h1>
 

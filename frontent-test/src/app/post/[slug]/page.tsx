@@ -22,6 +22,14 @@ export default async function PostPage({ params }: PageProps) {
     await getMedia(post.featured_media) || undefined : 
     undefined
 
+  console.log('Featured Media:', {
+    postId: post.id,
+    mediaId: post.featured_media,
+    mediaContent: media,
+    mediaSizes: media?.media_details?.sizes,
+    sourceUrl: media?.source_url
+  })
+
   // Get related posts (just get the latest posts excluding current one)
   const { posts: relatedPostsData } = await getPosts(1, 3)
   const filteredRelatedPosts = relatedPostsData.filter(p => p.id !== post.id).slice(0, 2)
