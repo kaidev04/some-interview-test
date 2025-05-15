@@ -25,9 +25,13 @@ export default function FeaturedImage({
 
   if (!media) return null
 
-  const imageSize = media.media_details.sizes[size] || media.media_details.sizes.full
-  const imageUrl = imageSize?.source_url || media.source_url
-  const altText = media.alt_text || media.title.rendered || "Featured image"
+  const imageSize = media?.media_details?.sizes[size] || media?.media_details?.sizes?.full || {
+    source_url: '',
+    width: 800,
+    height: 600
+  }
+  const imageUrl = imageSize?.source_url || media?.source_url
+  const altText = media?.alt_text || media?.title?.rendered || "Featured image"
 
   const hoverClass = withHoverEffect
     ? "transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"

@@ -38,14 +38,14 @@ export default function PostGrid({
 
   // Get categories for each post
   const getPostCategories = (post: WordPressPost) => {
-    return categories.filter((cat) => post.categories.includes(cat.id))
+    return categories.filter((cat) => (post.categories ?? []).includes(cat.id))
   }
 
   if (posts.length === 0) {
     return (
       <div className="text-center py-12">
-        <h3 className="text-2xl font-bold text-gray-700 mb-4">No posts found</h3>
-        <p className="text-gray-500">Check back later for new content.</p>
+        <h3 className="text-2xl font-bold text-gray-700 mb-4">Inga inlägg hittade</h3>
+        <p className="text-gray-500">Kolla tillbaka senare för nytt innehåll.</p>
       </div>
     )
   }
@@ -72,7 +72,7 @@ export default function PostGrid({
             onClick={handleLoadMore}
             className="px-6 py-3 bg-white border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors font-medium"
           >
-            Load More
+            Ladda fler
           </button>
         </div>
       )}

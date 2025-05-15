@@ -3,11 +3,16 @@
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { ArrowLeft, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
-import type { WordPressPost, WordPressMedia, Category, Author } from "../types/wordpress"
+import type { WordPressPost, WordPressMedia, Category } from "../types/wordpress"
 import FeaturedImage from "./FeaturedImage"
-import DateFormatter from "./DateFormatter"
 import CategoryBadge from "./CategoryBadge"
-import { sanitizeHtml, estimateReadTime } from "../utils/html-parser"
+import { sanitizeHtml, estimateReadTime } from "@/utils/html-parser"
+import { formatDate } from "@/utils/html"
+
+interface Author {
+  name: string
+  id: number
+}
 
 interface PostContentProps {
   post: WordPressPost
@@ -64,7 +69,7 @@ export default function PostContent({ post, media, categories = [], author, rela
 
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm md:text-base text-gray-200">
               <div className="flex items-center">
-                <DateFormatter dateString={post.date} formatType="full" />
+                <time dateTime={post.date}>{formatDate(post.date)}</time>
               </div>
 
               <div className="flex items-center">
@@ -158,11 +163,9 @@ export default function PostContent({ post, media, categories = [], author, rela
                           <h4 className="font-medium text-gray-800 group-hover:text-emerald-600 transition-colors line-clamp-2">
                             {relatedPost.title.rendered}
                           </h4>
-                          <DateFormatter
-                            dateString={relatedPost.date}
-                            formatType="short"
-                            className="text-sm text-gray-500"
-                          />
+                          <time dateTime={relatedPost.date} className="text-sm text-gray-500">
+                            {formatDate(relatedPost.date)}
+                          </time>
                         </div>
                       </Link>
                     ))}

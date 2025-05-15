@@ -5,8 +5,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
 import FeaturedImage from "./FeaturedImage"
-import DateFormatter from "./DateFormatter"
-import { sanitizeHtml, stripHtml } from "@/utils/html-parser"
+import { sanitizeHtml, stripHtml, formatDate } from "@/utils/html"
 
 interface HeroSectionProps {
   post: WordPressPost
@@ -41,7 +40,7 @@ export default function HeroSection({ post, media }: HeroSectionProps) {
                 dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.excerpt.rendered) }}
               />
               <div className="flex items-center text-sm text-gray-500 mb-6">
-                <DateFormatter dateString={post.date} formatType="full" />
+                <time dateTime={post.date}>{formatDate(post.date)}</time>
                 <span className="mx-2">•</span>
                 <span>{stripHtml(post.content.rendered).split(" ").length / 200} min read</span>
               </div>
