@@ -2,8 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
-import PostCard from "@/components/PostCard"
-import Pagination from "@/components/Pagination"
+import PostsSection from "@/components/PostsSection"
 import { getPosts, getMedia } from '@/lib/wordpress'
 
 function formatDate(dateString: string): string {
@@ -13,7 +12,7 @@ function formatDate(dateString: string): string {
 }
 
 export default async function Home() {
-  const posts = await getPosts(1, 7) // Get 7 posts (1 featured + 6 grid)
+  const { posts, totalPages } = await getPosts(1, 9) // Get first page with 9 posts
   
   if (!posts || posts.length === 0) {
     return (
@@ -84,25 +83,12 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* Post Grid */}
-      <div className="py-12" id="posts-section">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Latest News</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {gridPosts.map((post, index) => (
-              <div
-                key={post.id}
-                className="animate-slideUp"
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                }}
-              >
-                <PostCard post={post} media={mediaMap.get(post.id)} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Posts Section */}
+      <PostsSection
+        posts={gridPosts}
+        mediaMap={mediaMap}
+        totalPages={totalPages}
+      />
 
       {/* Newsletter Section */}
       <div className="bg-gray-100 py-12">

@@ -17,7 +17,7 @@ export default function PostGrid({
   posts,
   media,
   categories,
-  initialPostsToShow = 6,
+  initialPostsToShow = 9,
   incrementAmount = 3,
 }: PostGridProps) {
   const [postsToShow, setPostsToShow] = useState(initialPostsToShow)
