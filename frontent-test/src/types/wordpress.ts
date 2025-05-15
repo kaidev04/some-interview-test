@@ -20,6 +20,12 @@ export interface WordPressPost {
       href: string
     }>
   }
+  _embedded?: {
+    author?: Array<{
+      id: number
+      name: string
+    }>
+  }
 }
 
 export interface WordPressMedia {

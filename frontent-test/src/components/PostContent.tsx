@@ -3,9 +3,8 @@
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { ArrowLeft, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
-import type { WordPressPost, WordPressMedia, Category } from "../types/wordpress"
+import type { WordPressPost, WordPressMedia } from "../types/wordpress"
 import FeaturedImage from "./FeaturedImage"
-import CategoryBadge from "./CategoryBadge"
 import { sanitizeHtml, estimateReadTime } from "@/utils/html-parser"
 import { formatDate } from "@/utils/html"
 
@@ -16,18 +15,41 @@ interface Author {
 
 interface PostContentProps {
   post: WordPressPost
-  media: WordPressMedia
-  categories?: Category[]
+  media?: WordPressMedia
   author?: Author
   relatedPosts?: Array<{
     post: WordPressPost
-    media: WordPressMedia
+    media?: WordPressMedia
   }>
 }
 
-export default function PostContent({ post, media, categories = [], author, relatedPosts = [] }: PostContentProps) {
+export default function PostContent({ post, media, author, relatedPosts = [] }: PostContentProps) {
   const heroRef = useRef<HTMLDivElement>(null)
-  const imageUrl = media?.source_url || "/placeholder.svg?height=600&width=1200"
+  const defaultMedia: WordPressMedia = {
+    id: 0,
+    source_url: "/placeholder.svg?height=800&width=1200",
+    alt_text: "",
+    media_details: {
+      width: 1200,
+      height: 800,
+      sizes: {
+        medium: {
+          source_url: "/placeholder.svg?height=200&width=300",
+          width: 300,
+          height: 200,
+        },
+        full: {
+          source_url: "/placeholder.svg?height=800&width=1200",
+          width: 1200,
+          height: 800,
+        },
+      },
+    },
+    title: {
+      rendered: "",
+    },
+  }
+  const imageUrl = (media || defaultMedia)?.source_url || "/placeholder.svg?height=600&width=1200"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,20 +73,12 @@ export default function PostContent({ post, media, categories = [], author, rela
       {/* Hero section with parallax */}
       <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <div ref={heroRef} className="absolute inset-0 -z-10">
-          <FeaturedImage media={media} size="full" priority={true} fill={true} className="w-full h-full" />
+          <FeaturedImage media={media || defaultMedia} size="full" priority={true} fill={true} className="w-full h-full" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         </div>
 
         <div className="container mx-auto px-4 h-full flex flex-col justify-end pb-12">
           <div className="max-w-3xl text-white">
-            {categories.length > 0 && (
-              <div className="mb-4 flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <CategoryBadge key={category.id} category={category} size="lg" />
-                ))}
-              </div>
-            )}
-
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{post.title.rendered}</h1>
 
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm md:text-base text-gray-200">
@@ -155,7 +169,7 @@ export default function PostContent({ post, media, categories = [], author, rela
                     {relatedPosts.map(({ post: relatedPost, media: relatedMedia }) => (
                       <Link key={relatedPost.id} href={`/post/${relatedPost.slug}`} className="flex gap-4 group">
                         <FeaturedImage
-                          media={relatedMedia}
+                          media={relatedMedia || defaultMedia}
                           size="thumbnail"
                           className="w-20 h-20 rounded-lg flex-shrink-0"
                         />
