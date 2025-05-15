@@ -80,7 +80,11 @@ export default function PostsSection({ posts: allPosts, mediaMap, totalPosts }: 
   return (
     <div className="py-12" id="posts-section">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">Aktuellt</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 inline-block relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-1 after:bg-emerald-500 after:rounded-full">
+            Aktuellt
+          </h2>
+        </div>
         
         <PostControls
           sortOrder={sortOrder}

@@ -94,61 +94,61 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
+                  className="text-gray-300 hover:text-emerald-400 transition-colors inline-flex items-center group relative pl-0 hover:pl-6"
                 >
                   <ArrowRight
                     size={14}
-                    className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
+                    className="absolute left-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
                   />
-                  Hem
+                  <span className="transition-all duration-300">Hem</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/nyheter"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
+                  className="text-gray-300 hover:text-emerald-400 transition-colors inline-flex items-center group relative pl-0 hover:pl-6"
                 >
                   <ArrowRight
                     size={14}
-                    className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
+                    className="absolute left-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
                   />
-                  Nyheter
+                  <span className="transition-all duration-300">Nyheter</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/om-oss"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
+                  className="text-gray-300 hover:text-emerald-400 transition-colors inline-flex items-center group relative pl-0 hover:pl-6"
                 >
                   <ArrowRight
                     size={14}
-                    className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
+                    className="absolute left-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
                   />
-                  Om oss
+                  <span className="transition-all duration-300">Om oss</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/kontakt"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
+                  className="text-gray-300 hover:text-emerald-400 transition-colors inline-flex items-center group relative pl-0 hover:pl-6"
                 >
                   <ArrowRight
                     size={14}
-                    className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
+                    className="absolute left-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
                   />
-                  Kontakt
+                  <span className="transition-all duration-300">Kontakt</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/sök"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
+                  className="text-gray-300 hover:text-emerald-400 transition-colors inline-flex items-center group relative pl-0 hover:pl-6"
                 >
                   <ArrowRight
                     size={14}
-                    className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
+                    className="absolute left-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
                   />
-                  Sök
+                  <span className="transition-all duration-300">Sök</span>
                 </Link>
               </li>
             </ul>
@@ -164,13 +164,13 @@ export default function Footer() {
                 <li key={category.slug}>
                   <Link
                     href={`/category/${category.slug}`}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors inline-flex items-center group relative pl-0 hover:pl-6"
                   >
                     <ArrowRight
                       size={14}
-                      className="mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300"
+                      className="absolute left-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
                     />
-                    {category.name}
+                    <span className="transition-all duration-300">{category.name}</span>
                   </Link>
                 </li>
               ))}
