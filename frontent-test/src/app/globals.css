@@ -13,7 +13,7 @@
     @apply [&_p:has(img)]:flex [&_p:has(img)]:flex-wrap [&_p:has(img)]:gap-4;
     @apply [&_p_img]:w-full [&_p_img]:md:max-w-[calc(50%-8px)] [&_p_img]:flex-1;
     @apply [&_p:has(img)]:justify-center [&_img]:rounded-xl [&_img]:my-2;
-    @apply prose-img:my-2 [&_p]:mb-6 prose-headings:mb-2 prose-headings:mt-4;
+    @apply prose-img:my-2 prose-img:rounded-xl [&_p]:mb-6 prose-headings:mb-2 prose-headings:mt-4;
     @apply [&_br]:content-[''] [&_br]:leading-[0.5];
     @apply [&_p:not(:has(img))]:block [&_strong]:inline-block [&_strong]:mb-1;
     @apply [&_video]:w-full [&_video]:h-auto [&_video]:rounded-xl [&_video]:my-4;
@@ -360,7 +360,7 @@ img {
 }
 
 .post-content img {
-  @apply rounded-lg my-6 max-w-full h-auto;
+  @apply rounded-xl my-6 max-w-full h-auto transition-transform hover:scale-[1.02];
 }
 
 .post-content a {
