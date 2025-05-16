@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import { Search } from "lucide-react"
-import PostCard from "@/components/PostCard"
+import { PostCard } from "@/components/posts"
 import Pagination from "@/components/Pagination"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
 import { stripHtml } from "@/utils/html"

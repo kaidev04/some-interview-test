@@ -3,7 +3,7 @@
 import { useState } from "react"
 import type { WordPressPost, WordPressMedia, Category } from "../types/wordpress"
 import HeroSection from "../components/HeroSection"
-import PostGrid from "../components/PostGrid"
+import { PostGrid } from "../components/posts"
 import { Mail } from "lucide-react"
 
 interface HomePageTemplateProps {
@@ -22,7 +22,7 @@ export default function HomePageTemplate({ posts, media, categories }: HomePageT
   // Filter remaining posts based on active category
   const filteredPosts = posts
     .slice(1)
-    .filter((post) => activeCategory === null || post.categories.includes(activeCategory))
+    .filter((post) => activeCategory === null || (post.categories?.includes(activeCategory) ?? false))
 
   return (
     <div className="space-y-16 pb-16">

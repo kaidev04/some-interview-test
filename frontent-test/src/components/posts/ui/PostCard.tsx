@@ -1,18 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, MessageSquare, Calendar } from "lucide-react"
-import type { WordPressPost, WordPressMedia, Category } from "@/types/wordpress"
 import { formatDate, stripHtml, decodeHtml } from "@/utils/html"
+import type { PostCardProps } from "../types"
 
-interface PostCardProps {
-  post: WordPressPost
-  media?: WordPressMedia | null
-  commentCount?: number
-  categories?: Category[]
-  index?: number
-}
-
-export default function PostCard({ post, media, commentCount = 0, categories, index }: PostCardProps) {
+export function PostCard({ post, media, commentCount = 0, categories, index }: PostCardProps) {
   const imageUrl = media?.source_url || "/placeholder.jpg"
   const excerpt = stripHtml(post.excerpt.rendered)
   const title = decodeHtml(post.title.rendered)
@@ -58,4 +50,4 @@ export default function PostCard({ post, media, commentCount = 0, categories, in
       </Link>
     </div>
   )
-}
+} 

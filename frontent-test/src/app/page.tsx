@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
-import PostsSection from "@/components/PostsSection"
+import { PostsSection } from "@/components/posts"
 import { getPosts, getMedia } from '@/lib/wordpress'
 import { formatDate, decodeHtml } from '@/utils/html'
 

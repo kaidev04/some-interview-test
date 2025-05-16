@@ -1,14 +1,9 @@
 "use client"
 
-import { Search, ArrowDownNarrowWide, ArrowUpNarrowWide} from "lucide-react"
+import { Search, ArrowDownNarrowWide, ArrowUpNarrowWide } from "lucide-react"
+import type { PostControlsProps } from "../types"
 
-interface PostControlsProps {
-  onSortChange: (order: 'newest' | 'oldest') => void
-  onSearch: (query: string) => void
-  sortOrder: 'newest' | 'oldest'
-}
-
-export default function PostControls({ onSortChange, onSearch, sortOrder }: PostControlsProps) {
+export function PostControls({ onSortChange, onSearch, sortOrder }: PostControlsProps) {
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
       <div className="flex items-center gap-2">

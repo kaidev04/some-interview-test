@@ -1,19 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import type { WordPressPost, WordPressMedia, Category } from "../types/wordpress"
-import PostCard from "./PostCard"
-import { GridSkeleton } from "./LoadingSkeletons"
+import { PostCard } from "./ui/PostCard"
+import { GridSkeleton } from "../LoadingSkeletons"
+import type { PostGridProps } from "./types"
 
-interface PostGridProps {
-  posts: WordPressPost[]
-  media: Record<number, WordPressMedia>
-  categories: Category[]
-  initialPostsToShow?: number
-  incrementAmount?: number
-}
-
-export default function PostGrid({
+export function PostGrid({
   posts,
   media,
   categories,
@@ -37,7 +29,7 @@ export default function PostGrid({
   const hasMorePosts = postsToShow < posts.length
 
   // Get categories for each post
-  const getPostCategories = (post: WordPressPost) => {
+  const getPostCategories = (post: any) => {
     return categories.filter((cat) => (post.categories ?? []).includes(cat.id))
   }
 
@@ -78,4 +70,4 @@ export default function PostGrid({
       )}
     </div>
   )
-}
+} 

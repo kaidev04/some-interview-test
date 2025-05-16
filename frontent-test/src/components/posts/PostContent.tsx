@@ -2,29 +2,17 @@
 
 import { useEffect, useRef } from "react"
 import Link from "next/link"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { ArrowLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
-import type { WordPressPost, WordPressMedia } from "../types/wordpress"
-import FeaturedImage from "./FeaturedImage"
+import FeaturedImage from "../FeaturedImage"
 import { sanitizeHtml } from "@/utils/html-parser"
 import { formatDate, decodeHtml } from "@/utils/html"
+import type { PostContentProps } from "./types"
 
-interface Author {
-  name: string
-  id: number
-}
-
-interface PostContentProps {
-  post: WordPressPost
-  media?: WordPressMedia
-  author?: Author
-}
-
-export default function PostContent({ post, media, author }: PostContentProps) {
+export function PostContent({ post, media, author }: PostContentProps) {
   const router = useRouter()
-  const searchParams = useSearchParams()
   const heroRef = useRef<HTMLDivElement>(null)
-  const defaultMedia: WordPressMedia = {
+  const defaultMedia = {
     id: 0,
     source_url: "/placeholder.svg?height=800&width=1200",
     alt_text: "",
@@ -48,7 +36,6 @@ export default function PostContent({ post, media, author }: PostContentProps) {
       rendered: "",
     },
   }
-  const imageUrl = (media || defaultMedia)?.source_url || "/placeholder.svg?height=600&width=1200"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -185,4 +172,4 @@ export default function PostContent({ post, media, author }: PostContentProps) {
       </div>
     </article>
   )
-}
+} 

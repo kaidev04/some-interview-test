@@ -3,8 +3,8 @@
 import type React from "react"
 
 import { useState } from "react"
-import type { WordPressPost, WordPressMedia, Category, Author } from "../types/wordpress"
-import PostContent from "../components/PostContent"
+import type { WordPressPost, WordPressMedia, Category } from "../types/wordpress"
+import { PostContent, Author } from "../components/posts"
 import { MessageSquare, Send } from "lucide-react"
 
 interface PostDetailTemplateProps {

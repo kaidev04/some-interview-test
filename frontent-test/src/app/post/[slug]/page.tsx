@@ -3,7 +3,7 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
 import { getPost, getMedia, getPosts } from '@/lib/wordpress'
-import PostContent from '@/components/PostContent'
+import { PostContent } from '@/components/posts'
 
 interface PageProps {
   params: Promise<{ slug: string }>
