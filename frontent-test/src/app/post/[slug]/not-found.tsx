@@ -1,10 +1,10 @@
-import { NotFoundDisplay } from '@/components/common'
+import { NotFoundError } from '@/components/common'
 
 export default function NotFound() {
   return (
-    <NotFoundDisplay 
-      title="Inlägg hittades inte" 
-      message="Inlägget du letar efter finns inte eller har flyttats."
+    <NotFoundError
+      title="Inlägget hittades inte"
+      message="Det inlägg du letar efter finns inte eller har flyttats."
     />
   )
 } 

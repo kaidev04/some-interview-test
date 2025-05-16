@@ -15,6 +15,13 @@ export default function Error({
   }, [error]);
 
   return (
-    <ErrorDisplay onAction={reset}/>
+    <ErrorDisplay
+      title="Något gick fel!"
+      message={error.message || "Ett oväntat fel har inträffat."}
+      action={{
+        text: "Försök igen",
+        onClick: reset
+      }}
+    />
   );
 } 

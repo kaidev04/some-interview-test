@@ -6,7 +6,7 @@ import { sanitizeHtml } from "@/utils/html-parser"
 import type { PostContentProps } from "./types"
 import { PostHero } from "./PostHero"
 import { ShareButtons } from "./ui/ShareButtons"
-import { Newsletter } from "../common/Newsletter"
+import { Newsletter } from "../common/newsletter"
 
 export function PostContent({ post, media, author }: PostContentProps) {
   const router = useRouter()
