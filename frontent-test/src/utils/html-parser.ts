@@ -60,6 +60,9 @@ export const sanitizeHtml = (html: string): string => {
       '*': ['class', 'id', 'style'],
       'img': ['src', 'alt', 'title', 'width', 'height', 'loading', 'decoding', 'class'],
       'source': ['src', 'type'],
+      'video': ['src', 'controls', 'width', 'height', 'poster', 'preload', 'autoplay', 'muted', 'loop', 'playsinline', 'class'],
+      'audio': ['src', 'controls', 'preload', 'autoplay', 'muted', 'loop', 'class'],
+      'iframe': ['src', 'width', 'height', 'frameborder', 'allowfullscreen', 'allow', 'class']
     },
     transformTags: {
       'img': (tagName, attribs) => {
@@ -99,6 +102,17 @@ export const sanitizeHtml = (html: string): string => {
             loading: 'lazy',
             decoding: 'async',
             class: 'rounded-lg w-full h-auto'
+          }
+        }
+      },
+      'video': (tagName, attribs) => {
+        // Ensure videos have controls by default
+        return {
+          tagName,
+          attribs: {
+            ...attribs,
+            controls: 'controls',
+            class: 'rounded-xl w-full h-auto my-4'
           }
         }
       }
