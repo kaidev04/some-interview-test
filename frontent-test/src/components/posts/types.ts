@@ -39,4 +39,10 @@ export interface PostContentProps {
     post: WordPressPost
     media: WordPressMedia
   }>
+}
+
+export interface PostHeroProps {
+  post: WordPressPost
+  media?: WordPressMedia
+  author?: Author
 } 
