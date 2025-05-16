@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
+import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
@@ -17,10 +18,27 @@ interface PostsSectionProps {
 const POSTS_PER_PAGE = 9
 
 export default function PostsSection({ posts: allPosts, mediaMap, totalPosts }: PostsSectionProps) {
-  const [currentPage, setCurrentPage] = useState(1)
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  
+  // Get initial page from URL or default to 1
+  const initialPage = parseInt(searchParams.get('page') || '1', 10)
+  const [currentPage, setCurrentPage] = useState(initialPage)
   const [sortOrder, setSortOrder] = useState<'newest' | 'oldest'>('newest')
   const [searchQuery, setSearchQuery] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+
+  // Update URL when page changes without scrolling
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    if (currentPage === 1) {
+      url.searchParams.delete('page')
+    } else {
+      url.searchParams.set('page', currentPage.toString())
+    }
+    // Use replace instead of push to avoid adding to history stack
+    router.replace(url.pathname + url.search, { scroll: false })
+  }, [currentPage, router])
 
   // Filter and sort posts
   const filteredAndSortedPosts = useMemo(() => {

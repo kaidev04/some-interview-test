@@ -9,6 +9,7 @@ import { X, Search, ArrowRight } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "../types/wordpress"
 import FeaturedImage from "./FeaturedImage"
 import { stripHtml } from "../utils/html-parser"
+import { decodeHtml } from "../utils/html"
 
 interface SearchOverlayProps {
   isOpen: boolean
@@ -52,8 +53,8 @@ export default function SearchOverlay({ isOpen, onClose, posts, media }: SearchO
     const term = searchTerm.toLowerCase()
     const results = posts
       .filter((post) => {
-        const title = stripHtml(post.title.rendered).toLowerCase()
-        const content = stripHtml(post.content.rendered).toLowerCase()
+        const title = decodeHtml(stripHtml(post.title.rendered)).toLowerCase()
+        const content = decodeHtml(stripHtml(post.content.rendered)).toLowerCase()
         return title.includes(term) || content.includes(term)
       })
       .slice(0, 5) // Limit to 5 results
@@ -91,7 +92,7 @@ export default function SearchOverlay({ isOpen, onClose, posts, media }: SearchO
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search articles..."
+            placeholder="Sök inlägg..."
             className="flex-grow text-lg focus:outline-none"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -126,8 +127,8 @@ export default function SearchOverlay({ isOpen, onClose, posts, media }: SearchO
                     />
                   )}
                   <div className="flex-grow">
-                    <h3 className="font-medium text-gray-800 mb-1">{post.title.rendered}</h3>
-                    <p className="text-sm text-gray-600 line-clamp-2">{stripHtml(post.excerpt.rendered)}</p>
+                    <h3 className="font-medium text-gray-800 mb-1">{decodeHtml(post.title.rendered)}</h3>
+                    <p className="text-sm text-gray-600 line-clamp-2">{decodeHtml(stripHtml(post.excerpt.rendered))}</p>
                   </div>
                   <div className="flex items-center ml-2">
                     <ArrowRight size={16} className="text-emerald-600" />
@@ -150,7 +151,7 @@ export default function SearchOverlay({ isOpen, onClose, posts, media }: SearchO
 
         <div className="p-4 bg-gray-50 text-sm text-gray-500 flex justify-between items-center">
           <div>
-            <span className="font-medium">Pro tip:</span> Use arrow keys to navigate and Enter to select
+            <span className="font-medium">Tips:</span> Använd piltangenterna för att navigera och Enter för att välja
           </div>
           <div>
             <kbd className="px-2 py-1 bg-white rounded border border-gray-300 mr-1">↑</kbd>

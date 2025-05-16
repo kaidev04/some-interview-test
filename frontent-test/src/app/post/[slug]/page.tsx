@@ -22,29 +22,6 @@ export default async function PostPage({ params }: PageProps) {
     await getMedia(post.featured_media) || undefined : 
     undefined
 
-  console.log('Featured Media:', {
-    postId: post.id,
-    mediaId: post.featured_media,
-    mediaContent: media,
-    mediaSizes: media?.media_details?.sizes,
-    sourceUrl: media?.source_url
-  })
-
-  // Get related posts (just get the latest posts excluding current one)
-  const { posts: relatedPostsData } = await getPosts(1, 3)
-  const filteredRelatedPosts = relatedPostsData.filter(p => p.id !== post.id).slice(0, 2)
-
-  // Fetch media for related posts in parallel
-  const relatedMediaPromises = filteredRelatedPosts.map(relatedPost => 
-    relatedPost.featured_media ? getMedia(relatedPost.featured_media) : Promise.resolve(null)
-  )
-  const relatedMediaResponses = await Promise.all(relatedMediaPromises)
-
-  const relatedPosts = filteredRelatedPosts.map((relatedPost, index) => ({
-    post: relatedPost,
-    media: relatedMediaResponses[index] || undefined
-  }))
-
   // Get author from _embedded data if available
   const author = post._embedded?.author?.[0] ? {
     name: post._embedded.author[0].name,

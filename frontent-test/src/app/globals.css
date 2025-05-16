@@ -109,6 +109,20 @@ img {
   @apply text-emerald-600 hover:text-emerald-700 transition-colors;
 }
 
+/* Add video styling */
+.post-content video,
+.post-content .wp-video {
+  @apply my-6 w-full max-w-full rounded-xl overflow-hidden;
+}
+
+.post-content video {
+  @apply h-auto object-contain;
+}
+
+.post-content .wp-video-shortcode {
+  @apply w-full h-auto;
+}
+
 .prose {
   max-width: 65ch;
   margin: 0 auto;

@@ -1,12 +1,17 @@
 "use client"
 
-import type React from "react"
-
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { Search, Menu, X, ChevronUp } from "lucide-react"
 import Footer from "./Footer"
+import SearchOverlay from "./SearchOverlay"
+import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
+import { getPosts, getMedia } from "@/lib/wordpress"
+
+// Create a cache outside the component to persist between re-renders
+let postsCache: WordPressPost[] | null = null
+let mediaCache: Record<number, WordPressMedia> | null = null
 
 interface LayoutProps {
   children: React.ReactNode
@@ -16,10 +21,56 @@ export default function Layout({ children }: LayoutProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState("")
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [posts, setPosts] = useState<WordPressPost[]>(postsCache || [])
+  const [media, setMedia] = useState<Record<number, WordPressMedia>>(mediaCache || {})
+  const [isLoading, setIsLoading] = useState(!postsCache)
   const pathname = usePathname()
-  const router = useRouter()
+
+  const fetchData = useCallback(async () => {
+    if (postsCache && mediaCache) {
+      return
+    }
+
+    try {
+      setIsLoading(true)
+      // Fetch all posts
+      const { posts: fetchedPosts } = await getPosts()
+      
+      // Create a Set of unique media IDs to fetch
+      const mediaIds = new Set(
+        fetchedPosts
+          .filter(post => post.featured_media)
+          .map(post => post.featured_media)
+      )
+
+      // Fetch media for unique IDs
+      const mediaPromises = Array.from(mediaIds).map(mediaId => getMedia(mediaId))
+      const mediaResults = await Promise.all(mediaPromises)
+
+      // Create a map of media ID to media object
+      const mediaMap = mediaResults.reduce((acc, media, index) => {
+        if (media) {
+          acc[Array.from(mediaIds)[index]] = media
+        }
+        return acc
+      }, {} as Record<number, WordPressMedia>)
+
+      // Update state and cache
+      setPosts(fetchedPosts)
+      setMedia(mediaMap)
+      postsCache = fetchedPosts
+      mediaCache = mediaMap
+    } catch (error) {
+      console.error("Error fetching posts and media:", error)
+    } finally {
+      setIsLoading(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    fetchData()
+  }, [fetchData])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +82,11 @@ export default function Layout({ children }: LayoutProps) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Close search overlay when navigating
+  useEffect(() => {
+    setSearchOpen(false)
+  }, [pathname])
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
     if (searchOpen) setSearchOpen(false)
@@ -39,19 +95,6 @@ export default function Layout({ children }: LayoutProps) {
   const toggleSearch = () => {
     setSearchOpen(!searchOpen)
     if (mobileMenuOpen) setMobileMenuOpen(false)
-  }
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery)}`)
-      setSearchOpen(false)
-      setSearchQuery("")
-    }
-  }
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   const navLinks = [
@@ -63,7 +106,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <header
-        className={`bg-white shadow-sm py-4 sticky top-0 z-10 transition-all duration-300 ${
+        className={`bg-white shadow-sm py-4 sticky top-0 z-50 transition-all duration-300 ${
           isScrolled ? "shadow-md py-2" : ""
         }`}
       >
@@ -94,7 +137,10 @@ export default function Layout({ children }: LayoutProps) {
               </nav>
               <button
                 onClick={toggleSearch}
-                className="text-gray-700 hover:text-emerald-600 transition-colors p-2 rounded-full hover:bg-gray-100"
+                disabled={isLoading}
+                className={`text-gray-700 hover:text-emerald-600 transition-colors p-2 rounded-full hover:bg-gray-100 ${
+                  isLoading ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
                 aria-label="Search"
               >
                 <Search size={20} />
@@ -104,7 +150,10 @@ export default function Layout({ children }: LayoutProps) {
             <div className="flex md:hidden items-center space-x-2">
               <button
                 onClick={toggleSearch}
-                className="text-gray-700 hover:text-emerald-600 transition-colors p-2"
+                disabled={isLoading}
+                className={`text-gray-700 hover:text-emerald-600 transition-colors p-2 ${
+                  isLoading ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
                 aria-label="Search"
               >
                 <Search size={20} />
@@ -141,29 +190,12 @@ export default function Layout({ children }: LayoutProps) {
         )}
 
         {/* Search overlay */}
-        {searchOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-100 p-4 shadow-md animate-slideDown">
-            <div className="container mx-auto">
-              <form onSubmit={handleSearch} className="relative">
-                <input
-                  type="text"
-                  placeholder="Sök inlägg..."
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  autoFocus
-                />
-                <button
-                  type="submit"
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-emerald-600"
-                  aria-label="Submit search"
-                >
-                  <Search size={20} />
-                </button>
-              </form>
-            </div>
-          </div>
-        )}
+        <SearchOverlay
+          isOpen={searchOpen && !isLoading}
+          onClose={() => setSearchOpen(false)}
+          posts={posts}
+          media={media}
+        />
       </header>
 
       <main className="flex-grow">{children}</main>
@@ -173,7 +205,7 @@ export default function Layout({ children }: LayoutProps) {
       {/* Scroll to top button */}
       {showScrollTop && (
         <button
-          onClick={scrollToTop}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-6 right-6 bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-all hover:scale-110 animate-fadeIn z-40"
           aria-label="Scroll to top"
         >

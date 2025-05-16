@@ -2,11 +2,12 @@
 
 import { useEffect, useRef } from "react"
 import Link from "next/link"
-import { ArrowLeft, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
+import { useRouter, useSearchParams } from "next/navigation"
+import { ArrowLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
 import type { WordPressPost, WordPressMedia } from "../types/wordpress"
 import FeaturedImage from "./FeaturedImage"
-import { sanitizeHtml, estimateReadTime } from "@/utils/html-parser"
-import { formatDate } from "@/utils/html"
+import { sanitizeHtml } from "@/utils/html-parser"
+import { formatDate, decodeHtml } from "@/utils/html"
 
 interface Author {
   name: string
@@ -20,6 +21,8 @@ interface PostContentProps {
 }
 
 export default function PostContent({ post, media, author }: PostContentProps) {
+  const router = useRouter()
+  const searchParams = useSearchParams()
   const heroRef = useRef<HTMLDivElement>(null)
   const defaultMedia: WordPressMedia = {
     id: 0,
@@ -62,12 +65,10 @@ export default function PostContent({ post, media, author }: PostContentProps) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const readTime = estimateReadTime(post.content.rendered)
-
   return (
-    <article className="bg-white">
+    <article className="bg-white -mt-[64px]">
       {/* Hero section with parallax */}
-      <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+      <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
         <div ref={heroRef} className="absolute inset-0 w-full h-full">
           <div className="relative w-full h-full">
             <FeaturedImage 
@@ -75,7 +76,7 @@ export default function PostContent({ post, media, author }: PostContentProps) {
               size="full" 
               priority={true} 
               fill={true} 
-              className="w-full h-full"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
           </div>
@@ -83,23 +84,17 @@ export default function PostContent({ post, media, author }: PostContentProps) {
 
         <div className="container mx-auto px-4 h-full flex flex-col justify-end pb-12 relative z-10">
           <div className="max-w-3xl text-white">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{post.title.rendered}</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{decodeHtml(post.title.rendered)}</h1>
 
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm md:text-base text-gray-200">
               <div className="flex items-center">
-                <time dateTime={post.date}>{formatDate(post.date)}</time>
-              </div>
-
-              <div className="flex items-center">
-                <span className="inline-block w-1 h-1 rounded-full bg-gray-400 mr-4"></span>
-                <Clock size={16} className="mr-1" />
-                <span>{readTime} min read</span>
+                <span>Publicerad <time dateTime={post.date}>{formatDate(post.date)}</time></span>
               </div>
 
               {author && (
                 <div className="flex items-center">
                   <span className="inline-block w-1 h-1 rounded-full bg-gray-400 mr-4"></span>
-                  <span>By {author.name}</span>
+                  <span>Av {author.name}</span>
                 </div>
               )}
             </div>
@@ -112,13 +107,13 @@ export default function PostContent({ post, media, author }: PostContentProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8">
             {/* Back to posts link */}
-            <Link
-              href="/"
+            <button
+              onClick={() => router.back()}
               className="inline-flex items-center text-gray-600 hover:text-emerald-600 mb-8 transition-colors"
             >
               <ArrowLeft size={18} className="mr-2" />
               Back to posts
-            </Link>
+            </button>
 
             {/* Main content */}
             <div className="prose prose-lg max-w-none">
@@ -126,7 +121,7 @@ export default function PostContent({ post, media, author }: PostContentProps) {
                 dangerouslySetInnerHTML={{
                   __html: sanitizeHtml(post.content.rendered),
                 }}
-                className="post-content"
+                className="post-content [&_iframe]:w-full [&_iframe]:h-full [&_iframe]:absolute [&_iframe]:inset-0 [&_p:has(img)]:flex [&_p:has(img)]:flex-wrap [&_p:has(img)]:gap-4 [&_p_img]:w-full [&_p_img]:md:max-w-[calc(50%-8px)] [&_p_img]:flex-1 [&_p:has(img)]:justify-center [&_img]:rounded-xl [&_img]:my-2 prose-img:my-2 [&_p]:mb-6 prose-headings:mb-2 prose-headings:mt-4 [&_br]:content-[''] [&_br]:leading-[0.5] [&_p:not(:has(img))]:block [&_strong]:inline-block [&_strong]:mb-1 [&_video]:w-full [&_video]:h-auto [&_video]:rounded-xl [&_video]:my-4 [&_.wp-video]:w-full [&_.wp-video]:max-w-full [&_.wp-video]:my-4 [&_.wp-video-shortcode]:w-full [&_.wp-video-shortcode]:h-auto"
               />
             </div>
 
@@ -173,12 +168,12 @@ export default function PostContent({ post, media, author }: PostContentProps) {
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     required
                   />
                   <button
                     type="submit"
-                    className="w-full bg-emerald-600 text-white font-medium py-3 rounded-lg hover:bg-emerald-700 transition-colors"
+                    className="w-full bg-emerald-600 text-white font-medium py-3 rounded-xl hover:bg-emerald-700 transition-colors"
                   >
                     Subscribe
                   </button>
