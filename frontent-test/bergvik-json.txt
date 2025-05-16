@@ -1,0 +1,1426 @@
+[
+  {
+    "id": 16339,
+    "date": "2025-05-14T13:59:58",
+    "date_gmt": "2025-05-14T11:59:58",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=16339"
+    },
+    "modified": "2025-05-14T13:59:58",
+    "modified_gmt": "2025-05-14T11:59:58",
+    "slug": "bergvik-vann-guldvargen-2025",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/bergvik-vann-guldvargen-2025/",
+    "title": {
+      "rendered": "Bergvik vann Guldvargen 2025"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003EI vår kampanj Bergviks Värmlandshjärtan lyfter vi dom ideella hjältar och grymma fotbollsspelare som får Mallbackens IF att bli den fantastiska fotbollsförening som den är.\u003C/p\u003E\n\u003Cp\u003EMotivering:\u003C/p\u003E\n\u003Cp\u003E”Med Värmlandshjärtan skapades något ovanligt i vår bransch: en varm, respektfull och genomtänkt berättelse där huvudpersonerna inte är skådisar utan riktiga människor som får föreningen och framtiden att gå ihop med hjälp av ideellt slit och ett jävlar anamma starkare än någon maffig sponsbudget. Det är precis så här reklam ska kännas när den träffar rätt. Det här hade vi velat se fler timmar av i en serie på SVT. Prime time. Fylld av pyttipanna, pepp och gräsfläckar.”\u003C/p\u003E\n\u003Cp\u003EDessutom vann kampanjen även kategorin Årets Rörliga/Audio samt fick brons i Årets Guldhjärta.\u003C/p\u003E\n\u003Cp\u003EMotivering:\u003C/p\u003E\n\u003Cp\u003E&#8221;Det är lätt att snacka om social hållbarhet. Det är svårare att göra den synlig. Men Bergviks Värmlandshjärtan lyckades. Med ett hjärta som slår hårda slag för landsbygd, ideellt slit och muggkaffe i klubbhuset. Vi fick komma så nära att man nästan började lukta liniment och regnblöt konstgräsplan. Inga influensers, inga filter. Bara eldsjälar, pyttipanna och passion&#8221;\u003C/p\u003E\n\u003Cp\u003EVi är så glada och stolta! Stort tack Mallbackens IF för vårt fina samarbete 💚\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003EI vår kampanj Bergviks Värmlandshjärtan lyfter vi dom ideella hjältar och grymma fotbollsspelare som får Mallbackens IF att bli den fantastiska fotbollsförening som den är. Motivering: ”Med Värmlandshjärtan skapades något ovanligt i vår bransch: en varm, respektfull och genomtänkt berättelse där huvudpersonerna inte är skådisar utan riktiga människor som får föreningen och framtiden att gå [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 15,
+    "featured_media": 16340,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [126],
+    "class_list": [
+      "post-16339",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry",
+      "kategorier-nyheter-hallbarhet"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16339",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/15"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=16339"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16339/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 16348,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16339/revisions/16348"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/16340"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=16339"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=16339"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=16339"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=16339"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 16328,
+    "date": "2025-05-12T14:32:53",
+    "date_gmt": "2025-05-12T12:32:53",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=16328"
+    },
+    "modified": "2025-05-12T14:33:55",
+    "modified_gmt": "2025-05-12T12:33:55",
+    "slug": "swenstromskas-stenugnsbageri-till-bergvik",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/swenstromskas-stenugnsbageri-till-bergvik/",
+    "title": {
+      "rendered": "Swenströmskas Stenugnsbageri till Bergvik"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003EVi är superglada att kunna berätta att familjeföretaget Swenströmskas Stenugnsbageri öppnar hos oss på Bergvik!\u003Cbr /\u003E\nSwenströmskas Stenugnsbageri är ett hantverksbageri som bakar med surdeg i stenugn. Verksamheten består av bageri, konditori och kallskänk och allt görs från grunden.\u003C/p\u003E\n\u003Cp\u003ESamma goda sortiment som finns på bageriet i stan kommer erbjudas på Bergvik. Stilen på inredningen kommer att vara det samma och framförallt så kommer de gulliga kopparna till kaffet också att följa med.\u003C/p\u003E\n\u003Cp\u003E&nbsp;\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003EVi är superglada att kunna berätta att familjeföretaget Swenströmskas Stenugnsbageri öppnar hos oss på Bergvik! Swenströmskas Stenugnsbageri är ett hantverksbageri som bakar med surdeg i stenugn. Verksamheten består av bageri, konditori och kallskänk och allt görs från grunden. Samma goda sortiment som finns på bageriet i stan kommer erbjudas på Bergvik. Stilen på inredningen kommer [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 15,
+    "featured_media": 16329,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [],
+    "class_list": [
+      "post-16328",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16328",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/15"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=16328"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 2,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16328/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 16331,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16328/revisions/16331"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/16329"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=16328"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=16328"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=16328"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=16328"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 16091,
+    "date": "2025-04-04T15:24:49",
+    "date_gmt": "2025-04-04T13:24:49",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=16091"
+    },
+    "modified": "2025-04-04T15:38:58",
+    "modified_gmt": "2025-04-04T13:38:58",
+    "slug": "premiar-arets-smakradstips",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/premiar-arets-smakradstips/",
+    "title": {
+      "rendered": "Premiär för årets Smakrådstips på Bergvik"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003EFörst ut är Ella, som i en ny film delar med sig av sina personliga favoriter och hjälper Ida Hallquist att bli redo för vårsäsongen – missa inte det!\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EVill du ha ännu mer inspiration?\u003C/strong\u003E\u003Cbr /\u003E\nUtforska hela smakteamet och ta del av trendspaningar, produktfavoriter och säsongens bästa idéer.\u003C/p\u003E\n\u003Cp\u003E👉 \u003Ca href=\"https://bergvik.se/smakradet/tips/beautyrutin/\"\u003ESe filmen här\u003C/a\u003E\u003Cbr /\u003E\n👉 \u003Ca href=\"https://bergvik.se/smakradet/\"\u003EUpptäck årets smakprofiler och deras bästa tips\u003C/a\u003E\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003EFörst ut är Ella, som i en ny film delar med sig av sina personliga favoriter och hjälper Ida Hallquist att bli redo för vårsäsongen – missa inte det! Vill du ha ännu mer inspiration? Utforska hela smakteamet och ta del av trendspaningar, produktfavoriter och säsongens bästa idéer. 👉 Se filmen här 👉 Upptäck årets [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 16093,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [],
+    "class_list": [
+      "post-16091",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16091",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=16091"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16091/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 16092,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16091/revisions/16092"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/16093"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=16091"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=16091"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=16091"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=16091"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 16071,
+    "date": "2025-04-03T15:22:51",
+    "date_gmt": "2025-04-03T13:22:51",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=16071"
+    },
+    "modified": "2025-04-03T15:23:07",
+    "modified_gmt": "2025-04-03T13:23:07",
+    "slug": "vaccindirekt-oppnar-pa-bergvik",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/vaccindirekt-oppnar-pa-bergvik/",
+    "title": {
+      "rendered": "VaccinDirekt öppnar på Bergvik!"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E11 april öppnar Vaccindirekt hos oss på Bergvik. Mottagningen kommer finnas belägen vid Bronsentrén och erbjuda alla typer av vaccin för både barn och vuxna, även hälsokontroller och medicinska intyg. Ska du resa utomlands är Vaccindirekt experter på resemedicinsk rådgivning och resevaccinationer. Varmt välkomna till Bergvik säger vi till Vaccindirekt!\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003E11 april öppnar Vaccindirekt hos oss på Bergvik. Mottagningen kommer finnas belägen vid Bronsentrén och erbjuda alla typer av vaccin för både barn och vuxna, även hälsokontroller och medicinska intyg. Ska du resa utomlands är Vaccindirekt experter på resemedicinsk rådgivning och resevaccinationer. Varmt välkomna till Bergvik säger vi till Vaccindirekt!\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 15,
+    "featured_media": 16073,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [],
+    "class_list": [
+      "post-16071",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16071",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/15"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=16071"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 2,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16071/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 16315,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16071/revisions/16315"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/16073"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=16071"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=16071"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=16071"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=16071"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 16068,
+    "date": "2025-04-03T15:21:02",
+    "date_gmt": "2025-04-03T13:21:02",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=16068"
+    },
+    "modified": "2025-04-03T15:21:02",
+    "modified_gmt": "2025-04-03T13:21:02",
+    "slug": "zoo-se-oppnar-pa-bergvik",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/zoo-se-oppnar-pa-bergvik/",
+    "title": {
+      "rendered": "Zoo.se öppnar på Bergvik!"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003E10 april kl 10:00 öppnar djurbutikskedjan \u003Cstrong\u003E\u003Ca href=\"https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fl.facebook.com%2Fl.php%3Fu%3Dhttp%253A%252F%252FZoo.se%252F%253Ffbclid%253DIwZXh0bgNhZW0CMTAAAR2cZhO_h5abQMiH_NUaBX2W5Wc0ovZvCjYcDBGHMg9T5cRcUpyNie0I58E_aem_urE8eJLqtGxAYYQyOma-kw%26h%3DAT1i3dXvMTf17Azqi3gTEekPPAX5yFOL_Qq9sZX32ASBEhZxXcaNWlGqgl5V2JvrrD2uRAP7vGGrfkCYArJAkcs99rbGW2KXO114n-LmI9TcEchG9AhA2OwWje17uWi_C4-FvYiRjCcvQNyFPRUGm6_Q0Fc61-HREjY%26__tn__%3D-UK-R%26c%5B0%5D%3DAT13J2ToBAdhKXyURbHDQpU1KD7PJtJKgvtSEmyLyKtmDqnHFF1um8JujvurlwSxNMRStTL5Tmqw3KL32wkbuo1tnuzfvLkpCrDSELJrGuMPCxSJ2EEgpGm5cs9xQZzHpWcxV6pfAWHdhR0klEG5tNKm__zQ50yakF4xFhQuzLrX92ktDZr_nACNcJRMkcCBGmNTgBlS4ovOB9cescz8-N-8mQ&amp;data=05%7C02%7Culrika.danielsson%40newsec.se%7Cf47083e6f1d74429ca6e08dd72b039ed%7Ca76b06e3f40049db84dfe9a75fa473f6%7C1%7C0%7C638792823444403890%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=p12l7hqdSw1Zy4kVnCADpZWoork26MBBpVxZaYKZLZc%3D&amp;reserved=0\"\u003EZoo.se\u003C/a\u003E\u003C/strong\u003E hos oss på Bergvik. De kommer att erbjuda akvarier med fiskar och ett stort sortiment av sällskapsdjurs-produkter med över 550 varumärken.\u003C/p\u003E\n\u003Cp\u003E&#8211; Vi är glada och stolta över att \u003Cstrong\u003E\u003Ca href=\"https://eur02.safelinks.protection.outlook.com/?url=http%3A%2F%2Fzoo.se%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR2PbbbiZ9bApCbsVXgfbDVVNLrE1U2shC-XBbXa8JjCo99HGAsQVfeZBtQ_aem_CUbfIXK0FGOxH-dTnIFntw&amp;data=05%7C02%7Culrika.danielsson%40newsec.se%7Cf47083e6f1d74429ca6e08dd72b039ed%7Ca76b06e3f40049db84dfe9a75fa473f6%7C1%7C0%7C638792823444422742%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=q2TDcPcBL%2FyrHq24V0b08kmNRE7Fqwpw51sYj5JObnk%3D&amp;reserved=0\"\u003EZoo.se\u003C/a\u003E\u003C/strong\u003E väljer att etablera sig hos oss på Bergvik, säger vår centrumchef Olof. Vi jobbar efter att ständigt utveckla, förnya, och komplettera vår handelsplats. Just \u003Cstrong\u003E\u003Ca href=\"https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fl.facebook.com%2Fl.php%3Fu%3Dhttp%253A%252F%252FZoo.se%252F%253Ffbclid%253DIwZXh0bgNhZW0CMTAAAR019xQVR8mg4NcWU9yvkr0TXFLhoq7M9IP9WsMJgU_jkbW5oPpvAD8nbGU_aem_mlLNqCA0taYVN8DD9HJadA%26h%3DAT1i3dXvMTf17Azqi3gTEekPPAX5yFOL_Qq9sZX32ASBEhZxXcaNWlGqgl5V2JvrrD2uRAP7vGGrfkCYArJAkcs99rbGW2KXO114n-LmI9TcEchG9AhA2OwWje17uWi_C4-FvYiRjCcvQNyFPRUGm6_Q0Fc61-HREjY%26__tn__%3D-UK-R%26c%5B0%5D%3DAT13J2ToBAdhKXyURbHDQpU1KD7PJtJKgvtSEmyLyKtmDqnHFF1um8JujvurlwSxNMRStTL5Tmqw3KL32wkbuo1tnuzfvLkpCrDSELJrGuMPCxSJ2EEgpGm5cs9xQZzHpWcxV6pfAWHdhR0klEG5tNKm__zQ50yakF4xFhQuzLrX92ktDZr_nACNcJRMkcCBGmNTgBlS4ovOB9cescz8-N-8mQ&amp;data=05%7C02%7Culrika.danielsson%40newsec.se%7Cf47083e6f1d74429ca6e08dd72b039ed%7Ca76b06e3f40049db84dfe9a75fa473f6%7C1%7C0%7C638792823444436304%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=sLA%2FQI2zj2Ox1J1TgT5Sq4fmttcpfFAjZuiKw4eInOA%3D&amp;reserved=0\"\u003EZoo.se\u003C/a\u003E\u003C/strong\u003E är en unik butik som jag vet att våra kunder har önskat och frågat efter en längre tid.\u003C/p\u003E\n\u003Cp\u003EPå \u003Cstrong\u003E\u003Ca href=\"https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fl.facebook.com%2Fl.php%3Fu%3Dhttp%253A%252F%252FZoo.se%252F%253Ffbclid%253DIwZXh0bgNhZW0CMTAAAR3cXkNVqxSfNVacUuCYFLhwNJr8g8dqlcAnwYTxpkl-nFrzKCERTtaf58Q_aem_TdFw2Z61zBwtGDTzP-6emg%26h%3DAT1i3dXvMTf17Azqi3gTEekPPAX5yFOL_Qq9sZX32ASBEhZxXcaNWlGqgl5V2JvrrD2uRAP7vGGrfkCYArJAkcs99rbGW2KXO114n-LmI9TcEchG9AhA2OwWje17uWi_C4-FvYiRjCcvQNyFPRUGm6_Q0Fc61-HREjY%26__tn__%3D-UK-R%26c%5B0%5D%3DAT13J2ToBAdhKXyURbHDQpU1KD7PJtJKgvtSEmyLyKtmDqnHFF1um8JujvurlwSxNMRStTL5Tmqw3KL32wkbuo1tnuzfvLkpCrDSELJrGuMPCxSJ2EEgpGm5cs9xQZzHpWcxV6pfAWHdhR0klEG5tNKm__zQ50yakF4xFhQuzLrX92ktDZr_nACNcJRMkcCBGmNTgBlS4ovOB9cescz8-N-8mQ&amp;data=05%7C02%7Culrika.danielsson%40newsec.se%7Cf47083e6f1d74429ca6e08dd72b039ed%7Ca76b06e3f40049db84dfe9a75fa473f6%7C1%7C0%7C638792823444449349%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=E%2BOJFDOX0i2ZKLclUx0aurAoWdj9V6ZqZrpGWGfgcjI%3D&amp;reserved=0\"\u003EZoo.se\u003C/a\u003E\u003C/strong\u003E kommer du välkomnas av kunnig personal, alla med olika djurintressen. Allt ifrån hunduppfödare, foderspecialister och djurvårdare. Butiken kommer ligga mellan Hemtex och Clas Ohlson och öppnar i mitten av april. Varmt välkommen till Bergvik säger vi till Zoo.se\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003E10 april kl 10:00 öppnar djurbutikskedjan Zoo.se hos oss på Bergvik. De kommer att erbjuda akvarier med fiskar och ett stort sortiment av sällskapsdjurs-produkter med över 550 varumärken. &#8211; Vi är glada och stolta över att Zoo.se väljer att etablera sig hos oss på Bergvik, säger vår centrumchef Olof. Vi jobbar efter att ständigt utveckla, [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 15,
+    "featured_media": 16069,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [],
+    "class_list": [
+      "post-16068",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16068",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/15"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=16068"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16068/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 16070,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/16068/revisions/16070"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/16069"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=16068"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=16068"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=16068"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=16068"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 15942,
+    "date": "2025-03-18T14:50:37",
+    "date_gmt": "2025-03-18T13:50:37",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=15942"
+    },
+    "modified": "2025-03-28T15:37:30",
+    "modified_gmt": "2025-03-28T14:37:30",
+    "slug": "vi-hjalper-majblomman",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/vi-hjalper-majblomman/",
+    "title": {
+      "rendered": "Vi hjälper Majblomman"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003ELördag 12 april bjuder vi in till en dag där barnen står i fokus hos oss på Bergvik. \u003Cstrong\u003EFör varje besök denna dag skänker vi 5 kr till Majblomman.\u003C/strong\u003E Så ditt besök räknas och bidrar direkt till deras arbete för att motverka barnfattigdom i Sverige. Kom och delta i roliga aktiviteter för hela familjen, köp dina majblommor på plats och hjälp oss göra skillnad💛\u003C/p\u003E\n\u003Ch2\u003EDetta händer under dagen:\u003C/h2\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-18 Träffa Majblomman\u003C/strong\u003E\u003Cbr /\u003E\nHör mer om deras verksamhet och hur försäljningen av majblommor bidrar till att hjälpa barn som lever i fattigdom.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-18 Måla din egen majblomma.\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-18 Kasta ärt(blom)påsar i spelet cornhole\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-18 Köp majblommor\u003C/strong\u003E\u003Cbr /\u003E\noch bidra till att göra skillnad för barn i Karlstad med omnejd.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-18 Truls populära pysselhörna\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10–18 Innebandyklubben GS86 AIF besöker oss.\u003C/strong\u003E\u003Cbr /\u003E\nDelta i tävlingar med fina priser som passar hela familjen. Träffa spelare, prata innebandy och testa dina innebandykunskaper. Prickskytte och speedshooting.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-15 Roliga utmaningar och tävlingar med Sundstabadet\u003C/strong\u003E\u003Cbr /\u003E\nAntar du utmaningarna har du chans att vinna fina priser.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-16 ishockey-prickskytte med Kils AIK\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 10-18 Emil Meijer och Peppe Lundh från Forshaga Golfklubb\u003C/strong\u003E\u003Cbr /\u003E\nPuttävling och andra roliga aktiviteter.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 11-15 Träffa maskot Truls\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 11-15 Träffa Mallbacken IF\u003C/strong\u003E\u003Cbr /\u003E\nTävla om signerade fotbollar och få fribiljetter till nästa match.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 13-15 Käpphästhoppning med Rudskogens Ryttarförening\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 11-15 Kils AIK maskot Lizzy hälsar på\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 12-15 Speedshooting tillsammans Hellton\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EKl. 13-17 IF Göta på plats.\u003C/strong\u003E\u003Cbr /\u003E\nTesta spänsthopp och stående längdhopp.\u003C/p\u003E\n\u003Cp\u003EProgrammet uppdateras löpande.\u003C/p\u003E\n\u003Cp\u003E\u003Cstrong\u003EVälkommen till Bergvik den 12 april – Tillsammans gör vi skillnad💛\u003C/strong\u003E\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003ELördag 12 april bjuder vi in till en dag där barnen står i fokus hos oss på Bergvik. För varje besök denna dag skänker vi 5 kr till Majblomman. Så ditt besök räknas och bidrar direkt till deras arbete för att motverka barnfattigdom i Sverige. Kom och delta i roliga aktiviteter för hela familjen, köp [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 15,
+    "featured_media": 15943,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [126],
+    "class_list": [
+      "post-15942",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry",
+      "kategorier-nyheter-hallbarhet"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15942",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/15"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=15942"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 10,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15942/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 16032,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15942/revisions/16032"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/15943"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=15942"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=15942"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=15942"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=15942"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 15793,
+    "date": "2025-02-05T13:26:25",
+    "date_gmt": "2025-02-05T12:26:25",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=15793"
+    },
+    "modified": "2025-03-25T08:09:10",
+    "modified_gmt": "2025-03-25T07:09:10",
+    "slug": "dela-din-bergvik-story",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/dela-din-bergvik-story/",
+    "title": {
+      "rendered": "Dela din Bergvik story"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003ENu samlar vi in stora och små ögonblick från Bergviks besökare – tillsammans blir de Bergvik Stories. Fem vinnare belönas med ett presentkort på 1 000 kronor vardera. Tävlingen pågår t o m 30 mars 2025. Skicka in ditt bidrag via formuläret nedan för att ha chansen att vinna. Lycka till!\u003C/p\u003E\n\u003Cp\u003EJuryn består av representanter på Bergvik, må bästa, härligaste, mest spännande, skönaste story vinna.\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003ENu samlar vi in stora och små ögonblick från Bergviks besökare – tillsammans blir de Bergvik Stories. Fem vinnare belönas med ett presentkort på 1 000 kronor vardera. Tävlingen pågår t o m 30 mars 2025. Skicka in ditt bidrag via formuläret nedan för att ha chansen att vinna. Lycka till! Juryn består av representanter [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 15800,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [],
+    "class_list": [
+      "post-15793",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15793",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=15793"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 7,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15793/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 15960,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15793/revisions/15960"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/15800"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=15793"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=15793"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=15793"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=15793"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 15684,
+    "date": "2024-11-27T09:48:28",
+    "date_gmt": "2024-11-27T08:48:28",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=15684"
+    },
+    "modified": "2025-02-07T08:57:56",
+    "modified_gmt": "2025-02-07T07:57:56",
+    "slug": "traffa-truls-14e-december",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/traffa-truls-14e-december/",
+    "title": {
+      "rendered": "Träffa Truls 14:e december"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003EVälkommen till en magisk julupplevelse här på Bergvik! Träffa vår egen maskot Truls och sprid lite julstämning tillsammans. Lämna din önskelista till honom och få en liten gåva som tack. Truls finns på plats vid lekytan klockan 13, 14 och 15 – missa inte chansen att säga hej och krama om honom!\u003C/p\u003E\n\u003Cp\u003EVill du veta mer om Truls och alla hans roliga aktiviteter? Besök vår maskotsida för fler spännande överraskningar och skojiga saker att upptäcka! Passa även på att gå Truls tipspromenad och testa dina kunskaper med kluriga frågor som hela familjen kan uppskatta.\u003C/p\u003E\n\u003Cp\u003EVi på Bergvik önskar dig en riktigt God Jul och ser fram emot att fira med dig här hos oss! 🎄✨\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003EVälkommen till en magisk julupplevelse här på Bergvik! Träffa vår egen maskot Truls och sprid lite julstämning tillsammans. Lämna din önskelista till honom och få en liten gåva som tack. Truls finns på plats vid lekytan klockan 13, 14 och 15 – missa inte chansen att säga hej och krama om honom! Vill du veta [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 15,
+    "featured_media": 15682,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [127],
+    "class_list": [
+      "post-15684",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry",
+      "kategorier-nyheter-maskoten-truls"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15684",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/15"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=15684"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 3,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15684/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 15689,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15684/revisions/15689"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/15682"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=15684"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=15684"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=15684"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=15684"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 15681,
+    "date": "2024-11-27T09:47:05",
+    "date_gmt": "2024-11-27T08:47:05",
+    "guid": {
+      "rendered": "https://bergvik.se/?p=15681"
+    },
+    "modified": "2025-02-07T08:58:13",
+    "modified_gmt": "2025-02-07T07:58:13",
+    "slug": "traffa-truls-7e-december",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/traffa-truls-7e-december/",
+    "title": {
+      "rendered": "Träffa Truls 7:e december"
+    },
+    "content": {
+      "rendered": "\u003Cp\u003EVälkommen till en magisk julupplevelse här på Bergvik! Träffa vår egen maskot Truls och sprid lite julstämning tillsammans. Lämna din önskelista till honom och få en liten gåva som tack. Truls finns på plats vid lekytan klockan 13, 14 och 15 – missa inte chansen att säga hej och krama om honom!\u003C/p\u003E\n\u003Cp\u003EVill du veta mer om Truls och alla hans roliga aktiviteter? Besök vår maskotsida för fler spännande överraskningar och skojiga saker att upptäcka! Passa även på att gå Truls tipspromenad och testa dina kunskaper med kluriga frågor som hela familjen kan uppskatta.\u003C/p\u003E\n\u003Cp\u003EVi på Bergvik önskar dig en riktigt God Jul och ser fram emot att fira med dig här hos oss! 🎄✨\u003C/p\u003E\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003EVälkommen till en magisk julupplevelse här på Bergvik! Träffa vår egen maskot Truls och sprid lite julstämning tillsammans. Lämna din önskelista till honom och få en liten gåva som tack. Truls finns på plats vid lekytan klockan 13, 14 och 15 – missa inte chansen att säga hej och krama om honom! Vill du veta [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 15,
+    "featured_media": 15682,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [127],
+    "class_list": [
+      "post-15681",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry",
+      "kategorier-nyheter-maskoten-truls"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15681",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/15"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=15681"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 3,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15681/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 15688,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15681/revisions/15688"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/15682"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=15681"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=15681"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=15681"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=15681"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 15347,
+    "date": "2024-09-25T11:40:23",
+    "date_gmt": "2024-09-25T09:40:23",
+    "guid": {
+      "rendered": "https://bergvik.se/aktuellt/vi-hjalper-till-copy/"
+    },
+    "modified": "2024-10-25T14:34:36",
+    "modified_gmt": "2024-10-25T12:34:36",
+    "slug": "vi-fortsatter-att-hjalpa-till",
+    "status": "publish",
+    "type": "post",
+    "link": "https://bergvik.se/aktuellt/vi-fortsatter-att-hjalpa-till/",
+    "title": {
+      "rendered": "Vi fortsätter att hjälpa till!"
+    },
+    "content": {
+      "rendered": "\t\t\u003Cdiv data-elementor-type=\"wp-post\" data-elementor-id=\"15347\" class=\"elementor elementor-15347\" data-elementor-post-type=\"post\"\u003E\n\t\t\t\t\u003Cstyle\u003E\n                .elementor-element-7dda6ee{\n                --padding-top: var(--webien-padding-top-none);\n                --padding-right: var(--webien-padding-right-none);\n                --padding-bottom: var(--webien-padding-bottom-none);\n                --padding-left: var(--webien-padding-left-none);\n                }\n            \u003C/style\u003E\u003Cdiv class=\"webien-container-padding-none elementor-element elementor-element-7dda6ee e-flex e-con-boxed e-con e-parent\" data-id=\"7dda6ee\" data-element_type=\"container\"\u003E\n\t\t\t\t\t\u003Cdiv class=\"e-con-inner\"\u003E\n\t\t\t\t\u003Cdiv class=\"elementor-element elementor-element-608d341e elementor-widget elementor-widget-text-editor\" data-id=\"608d341e\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\"\u003E\n\t\t\t\t\u003Cdiv class=\"elementor-widget-container\"\u003E\n\t\t\t\t\t\t\t\t\t\u003Cp\u003ELördagen den 28 september var en dag fylld av glädje och engagemang på Bergvik, där varje besökare bidrog till att göra skillnad. Tack vare er skänkte vi 5 kr per besökare till förmån för Sveriges Stadsmissioner, som stöttar människor i utsatthet genom att erbjuda mat, tak över huvudet och långsiktigt stöd.\u003C/p\u003E\u003Cp\u003EDagen bjöd på massor av aktiviteter för hela familjen. Innebandyklubben GS86 AIF från Forshaga arrangerade tävlingar där besökarna kunde testa sina innebandykunskaper, och Rudskogens Ryttarförening höll en populär käpphästhoppning. Kils AIK fanns på plats med prickskytte och teknikövningar, och barnen kunde dessutom träffa Kils AIK maskoten Lizzy under dagen.\u003C/p\u003E\u003Cp\u003EVåra butiker var även med och bidrog till insamlingen. Hos Kicks kunde du swisha till Stadsmissionen och få en mystery box fylld med skönhetsprodukter, och Smycka anordnade en utlottning av ett vackert Coeur De Lion-armband för alla som handlade och swishade ett bidrag.\u003C/p\u003E\u003Cp\u003EVi vill rikta ett stort tack till alla som deltog och bidrog till att göra dagen så lyckad. Ert stöd gör skillnad, och vårt gemensamma arbete för att hjälpa de mest utsatta fortsätter. Fortsätt att stötta Stadsmissionen och deras ovärderliga arbete – tillsammans skapar vi en bättre framtid för de som behöver det mest. Tack för ditt engagemang ❤\u003C/p\u003E\t\t\t\t\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\u003Cstyle\u003E\n                .elementor-element-2fddc35{\n                --padding-top: var(--webien-padding-top-none);\n                --padding-right: var(--webien-padding-right-none);\n                --padding-bottom: var(--webien-padding-bottom-none);\n                --padding-left: var(--webien-padding-left-none);\n                }\n            \u003C/style\u003E\u003Cdiv class=\"webien-container-padding-none elementor-element elementor-element-2fddc35 e-flex e-con-boxed e-con e-parent\" data-id=\"2fddc35\" data-element_type=\"container\"\u003E\n\t\t\t\t\t\u003Cdiv class=\"e-con-inner\"\u003E\n\t\t\u003Cstyle\u003E\n                .elementor-element-e37aa47{\n                --padding-top: var(--webien-padding-top-none);\n                --padding-right: var(--webien-padding-right-none);\n                --padding-bottom: var(--webien-padding-bottom-none);\n                --padding-left: var(--webien-padding-left-none);\n                }\n            \u003C/style\u003E\u003Cdiv class=\"webien-container-padding-none elementor-element elementor-element-e37aa47 e-con-full e-flex e-con e-child\" data-id=\"e37aa47\" data-element_type=\"container\"\u003E\n\t\t\t\t\u003Cdiv class=\"elementor-element elementor-element-632fbfc elementor-widget elementor-widget-text-editor\" data-id=\"632fbfc\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\"\u003E\n\t\t\t\t\u003Cdiv class=\"elementor-widget-container\"\u003E\n\t\t\t\t\t\t\t\t\t\u003Cp\u003ESwisha ditt bidrag och hjälp oss stötta Sveriges Stadsmissioner i deras arbete för människor som lever i utsatthet.\u003C/p\u003E\u003Cp\u003ESwishnr: 123-900 17 51\u003C/p\u003E\u003Cp\u003ETillsammans hjälps vi åt ❤\u003C/p\u003E\t\t\t\t\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\u003Cstyle\u003E\n                .elementor-element-2ae0b43{\n                --padding-top: var(--webien-padding-top-default);\n                --padding-right: var(--webien-padding-right-default);\n                --padding-bottom: var(--webien-padding-bottom-default);\n                --padding-left: var(--webien-padding-left-default);\n                }\n            \u003C/style\u003E\u003Cdiv class=\"webien-container-padding-default elementor-element elementor-element-2ae0b43 e-con-full e-flex e-con e-child\" data-id=\"2ae0b43\" data-element_type=\"container\"\u003E\n\t\t\t\t\u003Cdiv class=\"elementor-element elementor-element-4bd46c9 elementor-widget elementor-widget-image\" data-id=\"4bd46c9\" data-element_type=\"widget\" data-widget_type=\"image.default\"\u003E\n\t\t\t\t\u003Cdiv class=\"elementor-widget-container\"\u003E\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\u003Cwebien-image class=\" has-thumb ratio-original\"\u003E\r\n\t\u003Cimg fetchpriority=\"high\" decoding=\"async\" src=\"https://c1.webien.cloud/pixel.webp\" width=\"600\" height=\"600\" data-srcset=\"https://bergvik.se/wp-content/uploads/2024/09/bergvik-qr.png\" data-original=\"https://bergvik.se/wp-content/uploads/2024/09/bergvik-qr.png\" data-optimize=\"1\" data-useoriginal=\"0\" data-ratio=\"none\" data-sizes=\"auto\" data-focus=\"attention\" class=\"main lazyload\" title=\"Bergvik QR\" alt=\"\" /\u003E\r\n\t\r\n\t\u003Cimg decoding=\"async\" width=\"600\" height=\"600\" src=\"https://wrooom.webien.io/eyJpbWFnZVVybCI6Imh0dHBzOi8vYmVyZ3Zpay5zZS93cC1jb250ZW50L3VwbG9hZHMvMjAyNC8wOS9iZXJndmlrLXFyLnBuZyIsInB1YmxpY0tleSI6Im5vS2V5IiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxNTAsImhlaWdodCI6MTUwLCJmaXQiOiJpbnNpZGUiLCJwb3NpdGlvbiI6ImF0dGVudGlvbiIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sImJsdXIiOjN9fQ==\" class=\"thumb\" /\u003E\r\n\t\u003C/webien-image\u003E\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "\u003Cp\u003ELördagen den 28 september var en dag fylld av glädje och engagemang på Bergvik, där varje besökare bidrog till att göra skillnad. Tack vare er skänkte vi 5 kr per besökare till förmån för Sveriges Stadsmissioner, som stöttar människor i utsatthet genom att erbjuda mat, tak över huvudet och långsiktigt stöd. Dagen bjöd på massor [&hellip;]\u003C/p\u003E\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 15125,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+      "_acf_changed": false,
+      "_relevanssi_hide_post": "",
+      "_relevanssi_hide_content": "",
+      "_relevanssi_pin_for_all": "",
+      "_relevanssi_pin_keywords": "",
+      "_relevanssi_unpin_keywords": "",
+      "_relevanssi_related_keywords": "",
+      "_relevanssi_related_include_ids": "",
+      "_relevanssi_related_exclude_ids": "",
+      "_relevanssi_related_no_append": "",
+      "_relevanssi_related_not_related": "",
+      "_relevanssi_related_posts": "",
+      "_relevanssi_noindex_reason": "",
+      "footnotes": ""
+    },
+    "categories": [1],
+    "tags": [],
+    "kategorier-nyheter": [],
+    "class_list": [
+      "post-15347",
+      "post",
+      "type-post",
+      "status-publish",
+      "format-standard",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "acf": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15347",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/comments?post=15347"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 10,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15347/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 15431,
+          "href": "https://bergvik.se/wp-json/wp/v2/posts/15347/revisions/15431"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/media/15125"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bergvik.se/wp-json/wp/v2/media?parent=15347"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/categories?post=15347"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/tags?post=15347"
+        },
+        {
+          "taxonomy": "kategorier-nyheter",
+          "embeddable": true,
+          "href": "https://bergvik.se/wp-json/wp/v2/kategorier-nyheter?post=15347"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
