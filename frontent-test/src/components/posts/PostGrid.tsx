@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { PostCard } from "./ui/PostCard"
-import { GridSkeleton } from "../LoadingSkeletons"
+import { GridSkeleton } from "../ui/LoadingSkeletons"
 import type { PostGridProps } from "./types"
 
 export function PostGrid({

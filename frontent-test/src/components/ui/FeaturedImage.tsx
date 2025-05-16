@@ -2,18 +2,9 @@
 
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import type { WordPressMedia } from "../types/wordpress"
+import type { FeaturedImageProps } from "./types"
 
-interface FeaturedImageProps {
-  media: WordPressMedia
-  size?: "thumbnail" | "medium" | "large" | "full"
-  className?: string
-  priority?: boolean
-  fill?: boolean
-  withHoverEffect?: boolean
-}
-
-export default function FeaturedImage({
+export function FeaturedImage({
   media,
   size = "large",
   className = "",
@@ -47,26 +38,9 @@ export default function FeaturedImage({
   const width = media?.media_details?.width || 800
   const height = media?.media_details?.height || 600
 
-  console.log('Image quality details:', {
-    url: imageUrl,
-    originalWidth: width,
-    originalHeight: height,
-    aspectRatio: (width / height).toFixed(2),
-    sourceSize: 'full',
-    fullSizeDetails: media?.media_details?.sizes?.full,
-    allAvailableSizes: Object.entries(media?.media_details?.sizes || {}).map(([key, value]: [string, any]) => ({
-      size: key,
-      dimensions: `${value.width}x${value.height}`,
-      url: value.source_url
-    }))
-  })
-
   const hoverClass = withHoverEffect
     ? "transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"
     : ""
-
-  // Remove blur effect from loading state
-  const loadingClass = ""
 
   // If no valid URL, show placeholder
   if (!imageUrl) {
@@ -95,7 +69,6 @@ export default function FeaturedImage({
           quality={100}
           onLoadingComplete={() => {
             setIsLoading(false)
-            console.log('Image loaded successfully:', imageUrl)
           }}
           onError={(e) => {
             console.error('Image failed to load:', imageUrl)
@@ -114,7 +87,6 @@ export default function FeaturedImage({
           quality={100}
           onLoadingComplete={() => {
             setIsLoading(false)
-            console.log('Image loaded successfully:', imageUrl)
           }}
           onError={(e) => {
             console.error('Image failed to load:', imageUrl)
@@ -129,4 +101,4 @@ export default function FeaturedImage({
       )}
     </div>
   )
-}
+} 

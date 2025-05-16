@@ -3,16 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
-import FeaturedImage from "./FeaturedImage"
+import { FeaturedImage } from "../ui"
 import { sanitizeHtml, stripHtml, formatDate } from "@/utils/html"
+import type { HeroSectionProps } from "./types"
 
-interface HeroSectionProps {
-  post: WordPressPost
-  media: WordPressMedia
-}
-
-export default function HeroSection({ post, media }: HeroSectionProps) {
+export function HeroSection({ post, media }: HeroSectionProps) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -68,4 +63,4 @@ export default function HeroSection({ post, media }: HeroSectionProps) {
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-emerald-200 opacity-20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
     </section>
   )
-}
+} 

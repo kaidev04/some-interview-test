@@ -1,24 +1,16 @@
 "use client"
 
-import type React from "react"
-
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { X, Search, ArrowRight } from "lucide-react"
-import type { WordPressPost, WordPressMedia } from "../types/wordpress"
-import FeaturedImage from "./FeaturedImage"
-import { stripHtml } from "../utils/html-parser"
-import { decodeHtml } from "../utils/html"
+import type { WordPressPost } from "@/types/wordpress"
+import { FeaturedImage } from "../ui"
+import { stripHtml } from "@/utils/html-parser"
+import { decodeHtml } from "@/utils/html"
+import type { SearchOverlayProps } from "./types"
 
-interface SearchOverlayProps {
-  isOpen: boolean
-  onClose: () => void
-  posts: WordPressPost[]
-  media: Record<number, WordPressMedia>
-}
-
-export default function SearchOverlay({ isOpen, onClose, posts, media }: SearchOverlayProps) {
+export function SearchOverlay({ isOpen, onClose, posts, media }: SearchOverlayProps) {
   const [searchTerm, setSearchTerm] = useState("")
   const [searchResults, setSearchResults] = useState<WordPressPost[]>([])
   const [selectedIndex, setSelectedIndex] = useState(-1)
@@ -162,4 +154,4 @@ export default function SearchOverlay({ isOpen, onClose, posts, media }: SearchO
       </div>
     </div>
   )
-}
+} 

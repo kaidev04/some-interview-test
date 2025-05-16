@@ -1,9 +1,4 @@
-import type { Category } from "../types/wordpress"
-
-interface CategoryBadgeProps {
-  category: Category
-  size?: "sm" | "md" | "lg"
-}
+import type { CategoryBadgeProps } from "./types"
 
 const categoryColors: Record<number, string> = {
   1: "bg-emerald-100 text-emerald-800",
@@ -14,7 +9,7 @@ const categoryColors: Record<number, string> = {
   // Add more category colors as needed
 }
 
-export default function CategoryBadge({ category, size = "md" }: CategoryBadgeProps) {
+export function CategoryBadge({ category, size = "md" }: CategoryBadgeProps) {
   const colorClass = categoryColors[category.id] || "bg-gray-100 text-gray-800"
 
   const sizeClasses = {
@@ -30,4 +25,4 @@ export default function CategoryBadge({ category, size = "md" }: CategoryBadgePr
       {category.name}
     </span>
   )
-}
+} 

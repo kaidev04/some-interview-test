@@ -1,12 +1,11 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import Link from "next/link"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, ArrowRight, Clock, Phone, MapPin } from "lucide-react"
+import type { FooterProps } from "./types"
 
-export default function Footer() {
+export function Footer({}: FooterProps) {
   const [email, setEmail] = useState("")
   const currentYear = new Date().getFullYear()
 
@@ -201,37 +200,47 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Clock size={18} className="mr-3 flex-shrink-0 text-emerald-400" />
-                <span>Måndag-Fredag: 9:00-17:00</span>
+                <span>Mån-Fre: 10-20, Lör-Sön: 10-18</span>
               </li>
             </ul>
           </div>
         </div>
-      </div>
 
-      {/* Bottom footer with legal links and copyright */}
-      <div className="border-t border-gray-700 mt-8 pt-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; Bergvik {currentYear}
-            </div>
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-              <Link href="/integritetspolicy" className="text-gray-400 hover:text-white transition-colors">
-                Integritetspolicy
-              </Link>
-              <Link href="/anvandningsvillkor" className="text-gray-400 hover:text-white transition-colors">
-                Användningsvillkor
-              </Link>
-              <Link href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">
-                Cookie Policy
-              </Link>
-              <Link href="/tillganglighet" className="text-gray-400 hover:text-white transition-colors">
-                Tillgänglighet
-              </Link>
-            </div>
+        {/* Newsletter */}
+        <div className="border-t border-gray-700 pt-12 pb-8">
+          <div className="max-w-xl mx-auto text-center">
+            <h3 className="text-xl font-semibold mb-2">Prenumerera på vårt nyhetsbrev</h3>
+            <p className="text-gray-300 mb-6">
+              Få de senaste nyheterna och händelserna direkt i din inkorg. Vi skickar aldrig spam!
+            </p>
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3">
+              <div className="w-full sm:flex-1">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Din e-postadress"
+                  className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-700 border border-gray-600 text-white placeholder-gray-400"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors"
+              >
+                Prenumerera
+              </button>
+            </form>
           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+          <p>
+            &copy; {currentYear} Bergvik News. Alla rättigheter förbehållna.
+          </p>
         </div>
       </div>
     </footer>
   )
-}
+} 

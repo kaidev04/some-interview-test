@@ -4,20 +4,17 @@ import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { Search, Menu, X, ChevronUp } from "lucide-react"
-import Footer from "./Footer"
-import SearchOverlay from "./SearchOverlay"
+import { Footer } from "./Footer"
+import { SearchOverlay } from "./SearchOverlay"
 import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
 import { getPosts, getMedia } from "@/lib/wordpress"
+import type { LayoutProps } from "./types"
 
 // Create a cache outside the component to persist between re-renders
 let postsCache: WordPressPost[] | null = null
 let mediaCache: Record<number, WordPressMedia> | null = null
 
-interface LayoutProps {
-  children: React.ReactNode
-}
-
-export default function Layout({ children }: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -200,18 +197,18 @@ export default function Layout({ children }: LayoutProps) {
 
       <main className="flex-grow">{children}</main>
 
-      <Footer />
-
       {/* Scroll to top button */}
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-all hover:scale-110 animate-fadeIn z-40"
+          className="fixed bottom-8 right-8 bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-colors z-20 animate-fadeIn"
           aria-label="Scroll to top"
         >
-          <ChevronUp size={20} />
+          <ChevronUp size={24} />
         </button>
       )}
+
+      <Footer />
     </div>
   )
-}
+} 

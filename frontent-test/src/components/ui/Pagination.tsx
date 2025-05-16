@@ -1,14 +1,9 @@
 "use client"
 
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import type { PaginationProps } from "./types"
 
-interface PaginationProps {
-  currentPage: number
-  totalPages: number
-  onPageChange: (page: number) => void
-}
-
-export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
+export function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
   // Generate page numbers to display
   const getPageNumbers = () => {
     const pageNumbers = []
@@ -100,4 +95,4 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
       </button>
     </div>
   )
-}
+} 

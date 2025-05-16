@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { PostCard } from "./ui/PostCard"
-import Pagination from "../Pagination"
+import { Pagination } from "../ui"
 import { PostControls } from "./ui/PostControls"
 import { usePosts } from "@/hooks/usePosts"
 import type { PostsSectionProps } from "./types"
