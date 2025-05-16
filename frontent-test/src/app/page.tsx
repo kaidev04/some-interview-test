@@ -1,6 +1,6 @@
 import type { WordPressPost, WordPressMedia } from "@/types/wp-content-types"
 import { PostsSection } from "@/components/posts"
-import { FeaturedPost } from "@/components/sections"
+import { FeaturedPost } from "@/components/posts"
 import { Newsletter } from "@/components/common"
 import { getPosts, getMedia } from '@/lib/wp-api-client'
 

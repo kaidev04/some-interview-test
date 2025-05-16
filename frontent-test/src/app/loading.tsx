@@ -1,6 +1,6 @@
-import { FeaturedPostSkeleton } from "@/components/sections"
+import { FeaturedPostSkeleton } from "@/components/posts"
 import { NewsletterSkeleton } from "@/components/common"
-import { GridSkeleton } from "@/components/ui"
+import { GridSkeleton } from "@/components/posts/ui/skeletons"
 
 export default function Loading() {
   return (

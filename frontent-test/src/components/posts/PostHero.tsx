@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useRef } from "react"
 import { FeaturedImage } from "../ui"
 import { decodeHtml, formatDate } from "@/utils/html"

@@ -1,7 +1,7 @@
-import { NotFoundDisplay } from '@/components/common'
+import { NotFoundError } from '@/components/common'
 
 export default function NotFound() {
   return (
-    <NotFoundDisplay />
+    <NotFoundError />
   )
 }
