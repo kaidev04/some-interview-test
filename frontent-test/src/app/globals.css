@@ -2,17 +2,275 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer components {
+  /* Post Content Styles */
+  .post-content-wrapper {
+    @apply prose prose-lg max-w-none;
+  }
+
+  .post-content {
+    @apply [&_iframe]:w-full [&_iframe]:h-full [&_iframe]:absolute [&_iframe]:inset-0;
+    @apply [&_p:has(img)]:flex [&_p:has(img)]:flex-wrap [&_p:has(img)]:gap-4;
+    @apply [&_p_img]:w-full [&_p_img]:md:max-w-[calc(50%-8px)] [&_p_img]:flex-1;
+    @apply [&_p:has(img)]:justify-center [&_img]:rounded-xl [&_img]:my-2;
+    @apply prose-img:my-2 [&_p]:mb-6 prose-headings:mb-2 prose-headings:mt-4;
+    @apply [&_br]:content-[''] [&_br]:leading-[0.5];
+    @apply [&_p:not(:has(img))]:block [&_strong]:inline-block [&_strong]:mb-1;
+    @apply [&_video]:w-full [&_video]:h-auto [&_video]:rounded-xl [&_video]:my-4;
+    @apply [&_.wp-video]:w-full [&_.wp-video]:max-w-full [&_.wp-video]:my-4;
+    @apply [&_.wp-video-shortcode]:w-full [&_.wp-video-shortcode]:h-auto;
+  }
+
+  /* Button Styles */
+  .btn {
+    @apply rounded-xl transition-colors font-medium;
+  }
+
+  .btn-primary {
+    @apply btn bg-emerald-600 text-white hover:bg-emerald-700;
+  }
+
+  .btn-outline {
+    @apply btn border border-emerald-600 text-emerald-600 hover:bg-emerald-50;
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center;
+  }
+
+  .btn-full {
+    @apply w-full;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2;
+  }
+
+  .btn-md {
+    @apply px-6 py-3;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1;
+  }
+
+  .card-content {
+    @apply p-5;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply text-gray-700 hover:text-emerald-600 transition-colors relative;
+    @apply after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full;
+    @apply after:bg-emerald-600 after:transition-all after:duration-300;
+  }
+
+  .nav-link-active {
+    @apply text-emerald-600 after:w-full;
+  }
+
+  /* Pagination Styles */
+  .pagination-btn {
+    @apply p-2 rounded-xl border border-gray-300 text-gray-600;
+    @apply hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .pagination-number {
+    @apply w-10 h-10 rounded-xl flex items-center justify-center transition-colors;
+    @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+  }
+
+  .pagination-number-active {
+    @apply bg-emerald-600 text-white border-emerald-600;
+  }
+
+  /* Loading Skeleton Styles */
+  .skeleton {
+    @apply animate-pulse bg-gray-200;
+  }
+
+  .skeleton-text {
+    @apply h-4 rounded skeleton;
+  }
+
+  .skeleton-title {
+    @apply h-6 rounded skeleton;
+  }
+
+  .skeleton-image {
+    @apply h-48 skeleton;
+  }
+
+  /* Error Display Styles */
+  .error-container {
+    @apply min-h-[50vh] flex items-center justify-center;
+  }
+
+  .error-content {
+    @apply text-center;
+  }
+
+  .error-icon {
+    @apply h-12 w-12 text-red-500 mx-auto mb-4;
+  }
+
+  .error-title {
+    @apply text-2xl font-bold text-gray-800 mb-2;
+  }
+
+  .error-message {
+    @apply text-gray-600 mb-6;
+  }
+
+  /* Form Styles */
+  .form-group {
+    @apply flex flex-col gap-2;
+  }
+
+  .form-label {
+    @apply text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2 rounded-xl border border-gray-300 
+    focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+    disabled:opacity-50 disabled:cursor-not-allowed
+    dark:border-gray-600 dark:bg-gray-800 dark:text-white;
+  }
+
+  .form-textarea {
+    @apply form-input min-h-[100px];
+  }
+
+  .form-select {
+    @apply form-input appearance-none bg-no-repeat bg-right pr-10;
+  }
+
+  .form-checkbox {
+    @apply h-4 w-4 rounded border-gray-300 text-emerald-600 
+    focus:ring-emerald-500 focus:ring-offset-0
+    dark:border-gray-600 dark:bg-gray-800;
+  }
+
+  /* Grid Layouts */
+  .grid-2-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .grid-3-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .grid-4-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+
+  /* Spacing Patterns */
+  .section-spacing {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .content-spacing {
+    @apply space-y-6 md:space-y-8;
+  }
+
+  .stack-spacing {
+    @apply space-y-4;
+  }
+
+  /* Container Patterns */
+  .container-narrow {
+    @apply max-w-2xl mx-auto px-4;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Animation Classes */
+  .animate-fade {
+    animation: fade var(--transition-normal) ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp var(--transition-normal) ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slideDown var(--transition-normal) ease-out;
+  }
+
+  .animate-scale {
+    animation: scale var(--transition-normal) ease-out;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-opacity {
+    @apply transition-opacity duration-300 hover:opacity-80;
+  }
 }
 
+:root {
+  /* Color Palette */
+  --color-primary: 16 185 129; /* emerald-500 */
+  --color-primary-dark: 4 120 87; /* emerald-700 */
+  --color-primary-light: 209 250 229; /* emerald-100 */
+  
+  --color-gray-50: 249 250 251;
+  --color-gray-100: 243 244 246;
+  --color-gray-200: 229 231 235;
+  --color-gray-300: 209 213 219;
+  --color-gray-400: 156 163 175;
+  --color-gray-500: 107 114 128;
+  --color-gray-600: 75 85 99;
+  --color-gray-700: 55 65 81;
+  --color-gray-800: 31 41 55;
+  --color-gray-900: 17 24 39;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 350ms;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-primary: 5 150 105; /* emerald-600 */
+    --color-primary-dark: 4 120 87; /* emerald-700 */
+    --color-primary-light: 167 243 208; /* emerald-200 */
   }
 }
 
@@ -169,4 +427,43 @@ img {
 
 .hover-underline {
   @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-emerald-600 after:transition-all after:duration-300;
+}
+
+/* Animation Keyframes */
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

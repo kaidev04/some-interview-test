@@ -14,15 +14,17 @@ export function NotFoundDisplay({
   linkHref = "/"
 }: NotFoundDisplayProps) {
   return (
-    <div className="container mx-auto px-4 py-16 text-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">{title}</h1>
-      <p className="text-gray-600 mb-8">{message}</p>
-      <Link
-        href={linkHref}
-        className="inline-block px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
-      >
-        {linkText}
-      </Link>
+    <div className="error-container">
+      <div className="error-content">
+        <h1 className="error-title text-4xl">{title}</h1>
+        <p className="error-message text-lg">{message}</p>
+        <Link
+          href={linkHref}
+          className="btn btn-primary btn-md inline-block"
+        >
+          {linkText}
+        </Link>
+      </div>
     </div>
   )
 } 
