@@ -206,38 +206,10 @@ export function Footer({}: FooterProps) {
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="border-t border-gray-700 pt-12 pb-8">
-          <div className="max-w-xl mx-auto text-center">
-            <h3 className="text-xl font-semibold mb-2">Prenumerera på vårt nyhetsbrev</h3>
-            <p className="text-gray-300 mb-6">
-              Få de senaste nyheterna och händelserna direkt i din inkorg. Vi skickar aldrig spam!
-            </p>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3">
-              <div className="w-full sm:flex-1">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Din e-postadress"
-                  className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-700 border border-gray-600 text-white placeholder-gray-400"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors"
-              >
-                Prenumerera
-              </button>
-            </form>
-          </div>
-        </div>
-
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
           <p>
-            &copy; {currentYear} Bergvik News. Alla rättigheter förbehållna.
+            &copy; Bergvik {currentYear}. Alla rättigheter förbehållna.
           </p>
         </div>
       </div>
