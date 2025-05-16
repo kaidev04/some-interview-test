@@ -6,8 +6,8 @@ import { usePathname, useRouter } from "next/navigation"
 import { Search, Menu, X, ChevronUp } from "lucide-react"
 import { Footer } from "./Footer"
 import { SearchOverlay } from "./SearchOverlay"
-import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
-import { getPosts, getMedia } from "@/lib/wordpress"
+import type { WordPressPost, WordPressMedia } from "@/types/wp-content-types"
+import { getPosts, getMedia } from "@/lib/wp-api-client"
 import type { LayoutProps } from "./types"
 
 // Create a cache outside the component to persist between re-renders

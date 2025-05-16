@@ -93,13 +93,13 @@ export function PostContent({ post, media, author }: PostContentProps) {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8">
-            {/* Back to posts link */}
+            {/* Back to previous page link */}
             <button
               onClick={() => router.back()}
               className="inline-flex items-center text-gray-600 hover:text-emerald-600 mb-8 transition-colors"
             >
               <ArrowLeft size={18} className="mr-2" />
-              Back to posts
+              Tillbaka
             </button>
 
             {/* Main content */}

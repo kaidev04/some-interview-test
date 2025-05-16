@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
+import type { WordPressPost, WordPressMedia } from "@/types/wp-content-types"
 import { formatDate, decodeHtml } from "@/utils/html"
 
 interface FeaturedPostProps {

@@ -1,4 +1,4 @@
-import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
+import type { WordPressPost, WordPressMedia } from "@/types/wp-content-types"
 
 export interface HeroSectionProps {
   post: WordPressPost

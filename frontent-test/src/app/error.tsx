@@ -15,11 +15,6 @@ export default function Error({
   }, [error]);
 
   return (
-    <ErrorDisplay 
-      title="Something went wrong!"
-      message="We encountered an error while loading the posts. Please try again."
-      actionText="Try again"
-      onAction={reset}
-    />
+    <ErrorDisplay onAction={reset}/>
   );
 } 

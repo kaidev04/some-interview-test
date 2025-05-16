@@ -4,7 +4,7 @@ import { ArrowRight, MessageSquare, Calendar } from "lucide-react"
 import { formatDate, stripHtml, decodeHtml } from "@/utils/html"
 import type { PostCardProps } from "../types"
 
-export function PostCard({ post, media, commentCount = 0, categories, index }: PostCardProps) {
+export function PostCard({ post, media, commentCount = 0, index }: PostCardProps) {
   const imageUrl = media?.source_url || "/placeholder.jpg"
   const excerpt = stripHtml(post.excerpt.rendered)
   const title = decodeHtml(post.title.rendered)

@@ -1,17 +1,15 @@
-import type { WordPressPost, WordPressMedia, Category } from "@/types/wordpress"
+import type { WordPressPost, WordPressMedia } from "@/types/wp-content-types"
 
 export interface PostCardProps {
   post: WordPressPost
   media?: WordPressMedia | null
   commentCount?: number
-  categories?: Category[]
   index?: number
 }
 
 export interface PostGridProps {
   posts: WordPressPost[]
   media: Record<number, WordPressMedia>
-  categories: Category[]
   initialPostsToShow?: number
   incrementAmount?: number
 }
@@ -37,7 +35,6 @@ export interface PostContentProps {
   post: WordPressPost
   media?: WordPressMedia
   author?: Author
-  categories?: Category[]
   relatedPosts?: Array<{
     post: WordPressPost
     media: WordPressMedia

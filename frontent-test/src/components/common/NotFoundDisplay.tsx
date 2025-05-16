@@ -8,9 +8,9 @@ interface NotFoundDisplayProps {
 }
 
 export function NotFoundDisplay({
-  title = "404 - Page Not Found",
-  message = "The page you are looking for does not exist or has been moved.",
-  linkText = "Return to Home",
+  title = "404 - Sidan hittades inte",
+  message = "Sidorna du letar efter finns inte eller har flyttats.",
+  linkText = "Tillbaka till startsidan",
   linkHref = "/"
 }: NotFoundDisplayProps) {
   return (

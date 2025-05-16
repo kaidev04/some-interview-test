@@ -10,9 +10,9 @@ interface ErrorDisplayProps {
 }
 
 export function ErrorDisplay({
-  title = "Something went wrong!",
-  message = "We encountered an error. Please try again.",
-  actionText = "Try again",
+  title = "Något gick fel!",
+  message = "Vi stötte på ett fel när vi laddade inläggen. Vänligen försök igen.",
+  actionText = "Försök igen",
   onAction
 }: ErrorDisplayProps) {
   return (

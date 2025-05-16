@@ -1,4 +1,3 @@
-export * from './CategoryBadge'
 export * from './FeaturedImage'
 export * from './LoadingSkeletons'
 export * from './Pagination'

@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import type { WordPressPost } from "@/types/wordpress"
+import type { WordPressPost } from "@/types/wp-content-types"
 
 interface UsePostsOptions {
   initialPage?: number

@@ -13,7 +13,6 @@ export interface WordPressPost {
     rendered: string
   }
   featured_media: number
-  categories?: number[]
   author?: number
   _links?: {
     'wp:featuredmedia'?: Array<{
@@ -46,11 +45,4 @@ export interface WordPressMedia {
   title?: {
     rendered: string
   }
-}
-
-export interface Category {
-  id: number
-  name: string
-  slug: string
-  description?: string
-}
+} 

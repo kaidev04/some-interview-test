@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
+import type { WordPressPost, WordPressMedia } from "@/types/wp-content-types"
 
 export interface LayoutProps {
   children: ReactNode

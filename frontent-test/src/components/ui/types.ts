@@ -1,10 +1,5 @@
 import type { ReactNode } from "react"
-import type { WordPressMedia, Category } from "@/types/wordpress"
-
-export interface CategoryBadgeProps {
-  category: Category
-  size?: "sm" | "md" | "lg"
-}
+import type { WordPressMedia } from "@/types/wp-content-types"
 
 export interface PaginationProps {
   currentPage: number

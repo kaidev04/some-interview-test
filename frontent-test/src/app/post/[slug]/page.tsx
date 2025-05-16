@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import type { WordPressPost, WordPressMedia } from "@/types/wordpress"
-import { getPost, getMedia, getPosts } from '@/lib/wordpress'
+import type { WordPressPost, WordPressMedia } from "@/types/wp-content-types"
+import { getPost, getMedia, getPosts } from '@/lib/wp-api-client'
 import { PostContent } from '@/components/posts'
 
 interface PageProps {

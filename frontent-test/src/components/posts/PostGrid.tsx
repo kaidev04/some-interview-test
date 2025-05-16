@@ -8,7 +8,6 @@ import type { PostGridProps } from "./types"
 export function PostGrid({
   posts,
   media,
-  categories,
   initialPostsToShow = 9,
   incrementAmount = 3,
 }: PostGridProps) {
@@ -28,11 +27,6 @@ export function PostGrid({
   const visiblePosts = posts.slice(0, postsToShow)
   const hasMorePosts = postsToShow < posts.length
 
-  // Get categories for each post
-  const getPostCategories = (post: any) => {
-    return categories.filter((cat) => (post.categories ?? []).includes(cat.id))
-  }
-
   if (posts.length === 0) {
     return (
       <div className="text-center py-12">
@@ -50,7 +44,6 @@ export function PostGrid({
             key={post.id}
             post={post}
             media={media[post.featured_media]}
-            categories={getPostCategories(post)}
             index={index}
           />
         ))}
